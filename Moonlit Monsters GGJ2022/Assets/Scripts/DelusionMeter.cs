@@ -18,7 +18,9 @@ public class DelusionMeter : MonoBehaviour
 		this._source.OnChange.AddListener(this.UpdateMeter);
 	}
 
-	/** Update the attached slider with the given value */
+	/** Update the attached slider with the given value
+	\param value The value to pass to the slider
+	*/
 	private void UpdateMeter(float value)
 	{
 		this._slider.value = value;
