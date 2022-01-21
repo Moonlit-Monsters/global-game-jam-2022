@@ -1,0 +1,21 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.24f1 (79c78de19888) revision 7980941'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19041) 64bit Core' Language: 'en' Physical Memory: 7636 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.24f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker22
+-projectPath
+C:/Users/rhysm/OneDrive/Documents/Unity Projects/global-game-jam-2022/Moonlit Monsters GGJ2022
+-logFile
+Logs/AssetImportWorker22.log
+-srvPort
+57641
+Successfully changed project path to: C:/Users/rhysm/OneDrive/Documents/Unity Projects/global-game-jam-2022/Moonlit Monsters GGJ2022
+C:/Users/rhysm/OneDrive/Documents/Unity Projects/global-game-jam-2022/Moonlit Monsters GGJ2022
+Using Asset Import Pipeline V2.
