@@ -19,34 +19,77 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 
-	[Header("Controls")]
-
 	[SerializeField]
-	[Tooltip("The name of the control used to move")]
-	private string _moveName;
+	[Tooltip("The Player's camera follow transform")]
+	private Transform _camFollowPoint;
 
-	public string MoveName
+	public Transform CamFollowPoint
 	{
 		get
 		{
-			return this._moveName;
+			return this._camFollowPoint;
 		}
 	}
 
-	/** The action used to move */
-	private InputAction _moveAction;
+	[SerializeField]
+	[Tooltip("The speed at which the Camera moves to offset")]
+	private float _camMoveSharpness;
+
+	public float CamMoveSharpness
+	{
+		get
+		{
+			return _camMoveSharpness;
+		}
+	}
+
+	[SerializeField]
+	[Tooltip("The offset amount for camera")]
+	private float _camOffset;
+
+	public float CamOffset
+	{
+		get
+		{
+			return _camOffset;
+		}
+	}
+
+	private Vector2 moveAxis;
 
 	private Rigidbody2D _rb;
 
 	private void Awake()
 	{
-		this._moveAction = this.GetComponent<PlayerInput>().actions[this.MoveName];
 		this._rb = this.GetComponent<Rigidbody2D>();
+	}
+
+	public void MyInput(InputAction.CallbackContext context) //Control scheme input values (is changed when the state of the input is change) (e.g. when w is pressed and when it is lifted)
+    {
+        float x = context.ReadValue<Vector2>().x;
+		float y = context.ReadValue<Vector2>().y;
+
+		moveAxis = new Vector2(AxisClamp(x), AxisClamp(y));
+    }
+
+	private float AxisClamp(float axis)
+	{
+		return axis > 0.333 ? 1f : (axis < -0.333 ? -1f : 0);
 	}
 
 	private void FixedUpdate()
 	{
-		Vector2 movement = this._moveAction.ReadValue<Vector2>().normalized * this.Speed * Time.deltaTime;
-		this._rb.AddForce(movement - this._rb.velocity, ForceMode2D.Force);
+		Vector2 movement = this.moveAxis.normalized * this.Speed * Time.deltaTime;
+		this._rb.AddForce(movement - this._rb.velocity, ForceMode2D.Impulse);
+
+		CameraFollowUpdate();
+	}
+
+	private void CameraFollowUpdate()
+	{
+		Vector3 posOffset = new Vector3(moveAxis.x, moveAxis.y, 0f).normalized * CamOffset;
+		Vector3 newPos = this.gameObject.transform.position + posOffset;
+
+		this._camFollowPoint.position = Vector3.Lerp(this.CamFollowPoint.position, newPos, this.CamMoveSharpness * Time.deltaTime);
 	}
 }
