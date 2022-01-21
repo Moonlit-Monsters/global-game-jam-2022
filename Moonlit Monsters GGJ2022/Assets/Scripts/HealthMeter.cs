@@ -23,7 +23,6 @@ public class HealthMeter : MonoBehaviour
 	*/
 	private void UpdateMeter(float value)
 	{
-		Debug.Log("Health Meter: " + value.ToString());
 		this._slider.value = value;
 	}
 }

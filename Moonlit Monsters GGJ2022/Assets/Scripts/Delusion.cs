@@ -54,7 +54,6 @@ public class Delusion : MonoBehaviour
 		set
 		{
 			this._value = Mathf.Min(this._maximum, Mathf.Max(0, value));
-			Debug.Log("Delusion: " + this._value.ToString());
 			this.OnChange.Invoke(this._value);
 		}
 	}
@@ -64,6 +63,11 @@ public class Delusion : MonoBehaviour
 	[SerializeField]
 	[Tooltip("The events invoked when the amount of delusion is modified")]
 	public UnityEvent<float> OnChange;
+
+	private void Awake()
+	{
+		this.ResetDecay();
+	}
 
 	private void Update()
 	{

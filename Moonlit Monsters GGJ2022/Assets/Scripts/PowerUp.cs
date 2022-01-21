@@ -29,10 +29,9 @@ public class PowerUp : MonoBehaviour
 	*/
 	public void Collect(Delusion collector)
 	{
-		Debug.Log("Collect: " + collector?.name);
 		if (collector != null)
 		{
-			collector.Value -= this.Value;
+			collector.Value += this.Value;
 		}
 		this.OnCollect.Invoke();
 		Object.Destroy(this.gameObject);
