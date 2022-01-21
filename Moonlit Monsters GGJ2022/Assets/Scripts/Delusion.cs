@@ -54,6 +54,7 @@ public class Delusion : MonoBehaviour
 		set
 		{
 			this._value = Mathf.Min(this._maximum, Mathf.Max(0, value));
+			Debug.Log("Delusion: " + this._value.ToString());
 			this.OnChange.Invoke(this._value);
 		}
 	}

@@ -23,6 +23,7 @@ public class DelusionMeter : MonoBehaviour
 	*/
 	private void UpdateMeter(float value)
 	{
+		Debug.Log("Delusioin Meter: " + value.ToString());
 		this._slider.value = value;
 	}
 }

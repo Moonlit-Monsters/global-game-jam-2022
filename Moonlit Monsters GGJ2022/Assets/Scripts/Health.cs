@@ -41,6 +41,6 @@ public class Health : MonoBehaviour
 
 	private void Awake()
 	{
-		this._value = this.Maximum;
+		this.Value = this.Maximum;
 	}
 }

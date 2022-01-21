@@ -29,6 +29,7 @@ public class PowerUp : MonoBehaviour
 	*/
 	public void Collect(Delusion collector)
 	{
+		Debug.Log("Collect: " + collector?.name);
 		if (collector != null)
 		{
 			collector.Value -= this.Value;
