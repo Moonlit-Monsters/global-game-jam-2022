@@ -25,5 +25,6 @@ public class DelusionMeter : MonoBehaviour
 	{
 		Debug.Log("Delusioin Meter: " + value.ToString());
 		this._slider.value = value;
+		Debug.Log("Meter is updating: " + value);
 	}
 }
