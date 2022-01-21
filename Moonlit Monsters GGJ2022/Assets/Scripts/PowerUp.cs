@@ -31,13 +31,13 @@ public class PowerUp : MonoBehaviour
 	{
 		if (collector != null)
 		{
-			collector.Value -= this.Value;
+			collector.Value += this.Value;
 		}
 		this.OnCollect.Invoke();
 		Object.Destroy(this.gameObject);
 	}
 
-	private void OnCollisionEnter2D(Collision2D coll)
+	private void OnTriggerEnter2D(Collider2D coll)
 	{
 		this.Collect(coll.gameObject.GetComponent<Delusion>());
 	}

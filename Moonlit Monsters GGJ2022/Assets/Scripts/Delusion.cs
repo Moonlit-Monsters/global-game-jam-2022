@@ -64,6 +64,11 @@ public class Delusion : MonoBehaviour
 	[Tooltip("The events invoked when the amount of delusion is modified")]
 	public UnityEvent<float> OnChange;
 
+	private void Awake()
+	{
+		this.ResetDecay();
+	}
+
 	private void Update()
 	{
 		this.Value -= this.DecayRate * Time.deltaTime;
