@@ -239,6 +239,8 @@ GameObject:
   - component: {fileID: 3997102111192497142}
   - component: {fileID: 3453216059614236633}
   - component: {fileID: 3453216059614236632}
+  - component: {fileID: 3039920016804712890}
+  - component: {fileID: 3039920016804712889}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -415,3 +417,36 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3039920016804712890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453216059614236634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5263c0053de04a54aa18560be2893e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maximum: 10
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3039920016804712889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453216059614236634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd53ffc20669f34f9ad2dffc319f416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maximum: 60
+  _baseDecayRate: 1
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []

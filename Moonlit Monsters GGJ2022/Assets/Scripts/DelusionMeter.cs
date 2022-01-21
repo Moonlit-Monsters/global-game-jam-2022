@@ -24,5 +24,6 @@ public class DelusionMeter : MonoBehaviour
 	private void UpdateMeter(float value)
 	{
 		this._slider.value = value;
+		Debug.Log("Meter is updating: " + value);
 	}
 }
