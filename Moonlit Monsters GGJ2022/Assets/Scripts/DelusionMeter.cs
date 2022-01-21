@@ -11,8 +11,14 @@ public class DelusionMeter : MonoBehaviour
 	[Tooltip("The delusion tracker to source the value from")]
 	private Delusion _source;
 
+	private void Awake()
+	{
+		this._slider.minValue = 0;
+		this._slider.maxValue = this._source.Maximum;
+	}
+
 	private void Update()
 	{
-		this._slider.value = this._source.Value / this._source.Maximum;
+		this._slider.value = this._source.Value;
 	}
 }
