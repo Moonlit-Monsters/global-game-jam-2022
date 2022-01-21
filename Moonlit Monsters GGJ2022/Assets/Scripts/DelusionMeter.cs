@@ -15,10 +15,12 @@ public class DelusionMeter : MonoBehaviour
 	{
 		this._slider.minValue = 0;
 		this._slider.maxValue = this._source.Maximum;
+		this._source.OnChange.AddListener(this.UpdateMeter);
 	}
 
-	private void Update()
+	/** Update the attached slider with the given value */
+	private void UpdateMeter(float value)
 	{
-		this._slider.value = this._source.Value;
+		this._slider.value = value;
 	}
 }
