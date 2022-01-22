@@ -29,11 +29,7 @@ public class Health : MonoBehaviour
 		set
 		{
 			this._value = Mathf.Min(this.Maximum, Mathf.Max(0, value));
-			this._onChange.Invoke(this._value);
-			if (this._value <= 0)
-			{
-				this._onDeath.Invoke();
-			}
+			this.OnChange.Invoke(this._value);
 		}
 	}
 
@@ -41,9 +37,10 @@ public class Health : MonoBehaviour
 
 	[SerializeField]
 	[Tooltip("The events invoked when health changes")]
-	private UnityEvent<float> _onChange;
+	public UnityEvent<float> OnChange;
 
-	[SerializeField]
-	[Tooltip("The events invoked when health is reduced to zero")]
-	private UnityEvent _onDeath;
+	private void Awake()
+	{
+		this.Value = this.Maximum;
+	}
 }
