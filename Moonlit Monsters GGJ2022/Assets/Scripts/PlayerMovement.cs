@@ -20,6 +20,18 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 	[SerializeField]
+	[Tooltip("The animator for the player sprites")]
+	private Animator _playerAnimator;
+
+	public Animator PlayerAnimator
+	{
+		get
+		{
+			return _playerAnimator;
+		}
+	}
+
+	[SerializeField]
 	[Tooltip("The Player's camera follow transform")]
 	private Transform _camFollowPoint;
 

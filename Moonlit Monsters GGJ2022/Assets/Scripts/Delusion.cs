@@ -67,6 +67,7 @@ public class Delusion : MonoBehaviour
 	private void Awake()
 	{
 		this.ResetDecay();
+		this.Value = this.Maximum;
 	}
 
 	private void Update()
