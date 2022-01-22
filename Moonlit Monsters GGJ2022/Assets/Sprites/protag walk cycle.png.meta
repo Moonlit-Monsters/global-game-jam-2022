@@ -134,8 +134,8 @@ TextureImporter:
         y: 239
         width: 43
         height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4883721, y: 0.4473684}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: walkFront_2
       rect:
         serializedVersion: 2
-        x: 95
-        y: 239
+        x: 94
+        y: 240
         width: 42
         height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54761904, y: 0.43421054}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,8 +197,8 @@ TextureImporter:
         y: 162
         width: 42
         height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52380955, y: 0.45070422}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,12 +214,12 @@ TextureImporter:
       name: sideLWalk_0
       rect:
         serializedVersion: 2
-        x: 52
+        x: 53
         y: 162
         width: 38
         height: 74
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.47368422, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,8 +239,8 @@ TextureImporter:
         y: 162
         width: 42
         height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.45238096, y: 0.45070422}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,8 +260,8 @@ TextureImporter:
         y: 83
         width: 42
         height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52380955, y: 0.43661973}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,8 +302,8 @@ TextureImporter:
         y: 83
         width: 42
         height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.45238096, y: 0.43661973}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -319,12 +319,12 @@ TextureImporter:
       name: backWalk_1
       rect:
         serializedVersion: 2
-        x: 2
+        x: 3
         y: 2
         width: 43
         height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.44186047, y: 0.4473684}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -340,12 +340,12 @@ TextureImporter:
       name: backWalk_0
       rect:
         serializedVersion: 2
-        x: 49
+        x: 48
         y: 5
         width: 40
         height: 74
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.525, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -365,8 +365,8 @@ TextureImporter:
         y: 2
         width: 43
         height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.53488374, y: 0.4473684}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
