@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac33b0ccaa6770f4db1c4bd7b447dd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scenePath: 
+  _scenePath: Assets/Scenes/SampleScene.unity
   _mode: 0
   _loadingScenePath: Assets/Scenes/Loading.unity
 --- !u!1 &5711748713247620355
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 6047706464837734491}
   - component: {fileID: 7525929580624947105}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
