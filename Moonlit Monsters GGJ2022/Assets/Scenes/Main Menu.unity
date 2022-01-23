@@ -362,6 +362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 6838698335238199257, guid: cede80147168b9f4b9316ae4e9e44675, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6838698335238199259, guid: cede80147168b9f4b9316ae4e9e44675, type: 3}
       propertyPath: m_Pivot.x
       value: 0
