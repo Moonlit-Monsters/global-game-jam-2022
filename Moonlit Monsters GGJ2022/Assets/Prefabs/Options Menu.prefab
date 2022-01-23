@@ -44,6 +44,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2606853606983343812}
     m_Modifications:
+    - target: {fileID: 2834880309710332916, guid: 9a860d70cd4bc014882828004ef35d64, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834880309710332916, guid: 9a860d70cd4bc014882828004ef35d64, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834880309710332916, guid: 9a860d70cd4bc014882828004ef35d64, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 408
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834880309710332916, guid: 9a860d70cd4bc014882828004ef35d64, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -121
+      objectReference: {fileID: 0}
     - target: {fileID: 3782500654733793791, guid: 9a860d70cd4bc014882828004ef35d64, type: 3}
       propertyPath: _toEnable
       value: 
@@ -151,6 +167,10 @@ PrefabInstance:
     - target: {fileID: 8504107624234947623, guid: 9a860d70cd4bc014882828004ef35d64, type: 3}
       propertyPath: m_Name
       value: Options Pane
+      objectReference: {fileID: 0}
+    - target: {fileID: 8504107624234947623, guid: 9a860d70cd4bc014882828004ef35d64, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a860d70cd4bc014882828004ef35d64, type: 3}
@@ -265,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9019761902889673913, guid: 8e784396d44d6444bbbf2929e197a1b2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e784396d44d6444bbbf2929e197a1b2, type: 3}
