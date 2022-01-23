@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: downStop
+  m_Name: upLeftWalk
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,12 +20,20 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -8320823888604250822, guid: 8033e94cdc7937d4e9a17b3248e6c799, type: 3}
+      value: {fileID: 3039311017713033841, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
+    - time: 0.16666667
+      value: {fileID: -892351425580340225, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
+    - time: 0.33333334
+      value: {fileID: -4401636711953760484, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
+    - time: 0.5
+      value: {fileID: -892351425580340225, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
+    - time: 0.6333333
+      value: {fileID: -892351425580340225, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
     attribute: m_Sprite
     path: DelusionForm
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 30
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -40,13 +48,17 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -8320823888604250822, guid: 8033e94cdc7937d4e9a17b3248e6c799, type: 3}
+    - {fileID: 3039311017713033841, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
+    - {fileID: -892351425580340225, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
+    - {fileID: -4401636711953760484, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
+    - {fileID: -892351425580340225, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
+    - {fileID: -892351425580340225, guid: 8da42b23c598d9949ab51a5d7b4c53ca, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.6666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3453216059614236633, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
+      propertyPath: _camMoveSharpness
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3453216059614236634, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -178,10 +182,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5344555632543970080, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2362823826092236437, guid: 149dca30017385f4cad3a84f91fd2736, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
 --- !u!114 &147412712 stripped
@@ -269,6 +269,18 @@ PrefabInstance:
     - target: {fileID: 7746805334695845111, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
       propertyPath: m_Name
       value: CamPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746805335281802112, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
+      propertyPath: m_XDamping
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746805335281802112, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
+      propertyPath: m_YDamping
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746805335281802112, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
+      propertyPath: m_ZDamping
+      value: 2.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
