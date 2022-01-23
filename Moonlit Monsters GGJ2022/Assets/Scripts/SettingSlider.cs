@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Michsky.UI.ModernUIPack;
 
 public class SettingSlider : MonoBehaviour
 {
 	[SerializeField]
 	[Tooltip("The linked slider")]
-	private Slider _slider;
+	private RadialSlider _slider;
 
 	[SerializeField]
 	[Tooltip("The name of the linked setting")]
@@ -21,8 +22,7 @@ public class SettingSlider : MonoBehaviour
 
 	private void Awake()
 	{
-		this._slider.value = PlayerPrefs.GetFloat(this._settingName, this._slider.value);
-		this._slider.onValueChanged.AddListener(this.UpdateSetting);
+		this._slider.currentValue = PlayerPrefs.GetFloat(this._settingName, this._slider.currentValue);
 	}
 
 	private void OnDestroy()
