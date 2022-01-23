@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -2950972565176718623, guid: 8ea213b497b19fd4d950265f6c83cb29, type: 3}
+      value: {fileID: 7672883773859256088, guid: f2ddd4e44dfe7644b9f67c5ad71d1523, type: 3}
     attribute: m_Sprite
     path: DelusionForm
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -2950972565176718623, guid: 8ea213b497b19fd4d950265f6c83cb29, type: 3}
+    - {fileID: 7672883773859256088, guid: f2ddd4e44dfe7644b9f67c5ad71d1523, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

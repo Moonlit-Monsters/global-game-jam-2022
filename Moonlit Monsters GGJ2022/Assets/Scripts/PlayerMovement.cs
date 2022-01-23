@@ -103,5 +103,6 @@ public class PlayerMovement : MonoBehaviour
 		Vector3 newPos = this.gameObject.transform.position + posOffset;
 
 		this._camFollowPoint.position = Vector3.Lerp(this.CamFollowPoint.position, newPos, this.CamMoveSharpness * Time.deltaTime);
+		this._camFollowPoint.position = (this._camFollowPoint.position - newPos).sqrMagnitude > 0.2 ? newPos : this._camFollowPoint.position;
 	}
 }
