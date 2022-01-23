@@ -71,6 +71,9 @@ public class PlayerMovement : MonoBehaviour
 
 	private Rigidbody2D _rb;
 
+	[SerializeField]
+	private ParticleSystem walkingParticles; 
+
 	private void Awake()
 	{
 		this._rb = this.GetComponent<Rigidbody2D>();
@@ -95,13 +98,21 @@ public class PlayerMovement : MonoBehaviour
 		this._rb.AddForce(movement - this._rb.velocity, ForceMode2D.Impulse);
 
 		CameraFollowUpdate();
+		ParticleUpdate();
+	}
+
+	private void ParticleUpdate()
+	{
+		var emission = walkingParticles.emission;
+		emission.rateOverTimeMultiplier = moveAxis != Vector2.zero ? 50f : 0f;
 	}
 
 	private void CameraFollowUpdate()
 	{
 		Vector3 posOffset = new Vector3(moveAxis.x, moveAxis.y, 0f).normalized * CamOffset;
 		Vector3 newPos = this.gameObject.transform.position + posOffset;
+		Vector3 velocity = Vector3.zero;
 
-		this._camFollowPoint.position = Vector3.Lerp(this.CamFollowPoint.position, newPos, this.CamMoveSharpness * Time.deltaTime);
+		this._camFollowPoint.position = Vector3.SmoothDamp(this.CamFollowPoint.position, newPos, ref velocity, 0.2f);
 	}
 }
