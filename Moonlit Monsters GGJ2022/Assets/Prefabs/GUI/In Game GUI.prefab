@@ -58,7 +58,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -236,11 +236,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1424621380662505273, guid: cc65a0dac23b47549b658705fee16af9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424621380662505273, guid: cc65a0dac23b47549b658705fee16af9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424621380662505273, guid: cc65a0dac23b47549b658705fee16af9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841449795416313116, guid: cc65a0dac23b47549b658705fee16af9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465857996424790828, guid: cc65a0dac23b47549b658705fee16af9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6854008138560036395, guid: cc65a0dac23b47549b658705fee16af9, type: 3}
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8189396409250046251, guid: cc65a0dac23b47549b658705fee16af9, type: 3}
+      propertyPath: hasBackground
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 322351673873022142, guid: cc65a0dac23b47549b658705fee16af9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc65a0dac23b47549b658705fee16af9, type: 3}
 --- !u!224 &749732468085763893 stripped
 RectTransform:

@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Michsky.UI.ModernUIPack;
 
 public class DelusionMeter : MonoBehaviour
 {
 	[SerializeField]
 	[Tooltip("The silder to control")]
-	private Slider _slider;
+	private ProgressBar _slider;
 
 	[SerializeField]
 	[Tooltip("The delusion tracker to source the value from")]
@@ -13,8 +14,8 @@ public class DelusionMeter : MonoBehaviour
 
 	private void Awake()
 	{
-		this._slider.minValue = 0;
-		this._slider.maxValue = this._source.Maximum;
+		this._slider.currentPercent = this._source.Maximum;
+		this._slider.currentPercent = this._source.Maximum;
 		this._source.OnChange.AddListener(this.UpdateMeter);
 	}
 
@@ -23,6 +24,6 @@ public class DelusionMeter : MonoBehaviour
 	*/
 	private void UpdateMeter(float value)
 	{
-		this._slider.value = value;
+		this._slider.currentPercent = value;
 	}
 }

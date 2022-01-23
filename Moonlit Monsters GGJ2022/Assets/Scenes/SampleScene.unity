@@ -365,27 +365,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: In Game GUI
       objectReference: {fileID: 0}
-    - target: {fileID: 1822063101583820318, guid: 71480ba4d17a38547966245011111ea2, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822063101583820318, guid: 71480ba4d17a38547966245011111ea2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822063101583820318, guid: 71480ba4d17a38547966245011111ea2, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996356754199570955, guid: 71480ba4d17a38547966245011111ea2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8412684682426528063, guid: 71480ba4d17a38547966245011111ea2, type: 3}
+    - target: {fileID: 1923771151702373970, guid: 71480ba4d17a38547966245011111ea2, type: 3}
       propertyPath: _source
       value: 
       objectReference: {fileID: 147412712}
-    - target: {fileID: 8548141184450726020, guid: 71480ba4d17a38547966245011111ea2, type: 3}
+    - target: {fileID: 7009756238721959012, guid: 71480ba4d17a38547966245011111ea2, type: 3}
       propertyPath: _source
       value: 
       objectReference: {fileID: 147412713}
