@@ -18,6 +18,19 @@ public class PowerUp : MonoBehaviour
 		}
 	}
 
+	[SerializeField]
+	[Tooltip("The time before Power-up respawns")]
+	[Min(5f)]
+	private float _respawnTime = 60f;
+
+	public float RespawnTime
+	{
+		get
+		{
+			return this._respawnTime;
+		}
+	}
+
 	[Header("Events")]
 
 	[SerializeField]
@@ -34,7 +47,13 @@ public class PowerUp : MonoBehaviour
 			collector.Value += this.Value;
 		}
 		this.OnCollect.Invoke();
-		Object.Destroy(this.gameObject);
+		this.gameObject.SetActive(false);
+		Invoke("Reactivate", RespawnTime);
+	}
+
+	private void Reactivate()
+	{
+		this.gameObject.SetActive(true);
 	}
 
 	private void OnTriggerEnter2D(Collider2D coll)

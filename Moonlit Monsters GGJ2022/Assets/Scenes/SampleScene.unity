@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3453216059614236633, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: _camMoveSharpness
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3453216059614236634, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -181,42 +177,6 @@ PrefabInstance:
     - target: {fileID: 3680498114521842175, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5344555632543970080, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_Size.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5344555632543970080, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_Size.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5344555632543970080, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -8320823888604250822, guid: 8ec0ed93586bd384198fc5c1323db559, type: 3}
-    - target: {fileID: 5344555632543970080, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5344555632543970080, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5344555632543970080, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -916598073
-      objectReference: {fileID: 0}
-    - target: {fileID: 5344555632543970080, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804389866742789954, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804389866742789954, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -916598073
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
@@ -305,18 +265,6 @@ PrefabInstance:
     - target: {fileID: 7746805334695845111, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
       propertyPath: m_Name
       value: CamPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 7746805335281802112, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
-      propertyPath: m_XDamping
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7746805335281802112, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
-      propertyPath: m_YDamping
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7746805335281802112, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
-      propertyPath: m_ZDamping
-      value: 2.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
@@ -515,8 +463,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1188570835253388897, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188570835253388897, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188570835253388897, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 258112409
       objectReference: {fileID: 0}
     - target: {fileID: 1945336416886018619, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
       propertyPath: m_Name
