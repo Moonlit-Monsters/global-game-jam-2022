@@ -1,5 +1,5 @@
 using UnityEngine;
-using Random = UnityEngine.Random;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D))]
 public class WanderAI : MonoBehaviour
@@ -111,6 +111,32 @@ public class WanderAI : MonoBehaviour
 		}
 	}
 
+	[Header("Events")]
+
+	[SerializeField]
+	[Tooltip("The methods invoked when this wanders")]
+	private UnityEvent _onWander;
+
+	public UnityEvent OnWander
+	{
+		get
+		{
+			return this._onWander;
+		}
+	}
+
+	[SerializeField]
+	[Tooltip("The methods invoked when this rests")]
+	private UnityEvent _onRest;
+
+	public UnityEvent OnRest
+	{
+		get
+		{
+			return this._onRest;
+		}
+	}
+
 	/** The point at which this started */
 	public Vector2 StartPoint {get; private set;}
 
@@ -123,55 +149,27 @@ public class WanderAI : MonoBehaviour
 	/** Whether this is currently resting */
 	public bool IsResting {get; private set;} = false;
 
-	#if UNITY_EDITOR
-		/** Log en error if the given maximum is lesser than the given minimum
-		\param label The data label logged in the error
-		\param min The minimum value to validate
-		\param max The maximum value to validate
-		*/
-		private void ValidateMinMax(string label, float min, float max)
-		{
-			if (max < min)
-			{
-				Debug.LogError("Maximum " + label + " cannot be lesser than minimum " + label);
-			}
-		}
-	#endif
-
-	/** Schedule the next wander phase */
-	public void StartWander()
-	{
-		this.Invoke("NextWander", Random.Range(this.MinimumTime, this.MaximumTime));
-	}
-
 	/** Set the next wander point and speed */
-	public void NextWander()
+	public void Wander()
 	{
-		Debug.Log("Wandering");
 		this.IsResting = false;
 		this.WanderPoint = this.StartPoint + Random.insideUnitCircle 
 			* Random.Range(this.MinimumRadius, this.MaximumRadius);
 		this.WanderSpeed = Random.Range(this.MinimumSpeed, this.MaximumSpeed);
+		this.CancelInvoke("Wander");
+		this.OnWander.Invoke();
 	}
 
 	/** Stop wandering */
-	public void ForceRest()
+	public void Rest()
 	{
-		Debug.Log("Resting");
 		this.IsResting = true;
 		this.Rb.velocity = Vector3.zero;
 		this.WanderPoint = this.Rb.position;
-		this.CancelInvoke("NextWander");
+		this.CancelInvoke("Wander");
+		this.Invoke("Wander", Random.Range(this.MinimumTime, this.MaximumTime));
+		this.OnRest.Invoke();
 	}
-
-	#if UNITY_EDITOR
-		private void OnValidate()
-		{
-			this.ValidateMinMax("wander radius", this.MinimumRadius, this.MaximumRadius);
-			this.ValidateMinMax("wander time", this.MinimumTime, this.MaximumTime);
-			this.ValidateMinMax("wander speed", this.MinimumSpeed, this.MaximumSpeed);
-		}
-	#endif
 
 	private void Awake()
 	{
@@ -180,33 +178,30 @@ public class WanderAI : MonoBehaviour
 
 	private void OnEnable()
 	{
-		this.StartWander();
+		this.Rest();
 	}
 
 	private void OnDisable()
 	{
-		this.ForceRest();
+		this.Rest();
 	}
 
 	private void Update()
 	{
 		if (!this.IsResting && (this.Rb.position - this.WanderPoint).sqrMagnitude < this.DistanceTolerance)
 		{
-			this.ForceRest();
-			this.StartWander();
+			this.Rest();
 		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D coll)
 	{
-		this.ForceRest();
-		this.StartWander();
+		this.Rest();
 	}
 
 	private void OnCollisionEnter2D(Collision2D coll)
 	{
-		this.ForceRest();
-		this.StartWander();
+		this.Rest();
 	}
 
 	private void FixedUpdate()
@@ -223,6 +218,26 @@ public class WanderAI : MonoBehaviour
 	}
 
 	#if UNITY_EDITOR
+		/** Log en error if the given maximum is lesser than the given minimum
+		\param label The data label logged in the error
+		\param min The minimum value to validate
+		\param max The maximum value to validate
+		*/
+		private void ValidateMinMax(string label, float min, float max)
+		{
+			if (max < min)
+			{
+				Debug.LogError("Maximum " + label + " cannot be lesser than minimum " + label);
+			}
+		}
+		
+		private void OnValidate()
+		{
+			this.ValidateMinMax("wander radius", this.MinimumRadius, this.MaximumRadius);
+			this.ValidateMinMax("wander time", this.MinimumTime, this.MaximumTime);
+			this.ValidateMinMax("wander speed", this.MinimumSpeed, this.MaximumSpeed);
+		}
+		
 		private void OnDrawGizmosSelected()
 		{
 			Gizmos.color = Color.white;
@@ -230,7 +245,7 @@ public class WanderAI : MonoBehaviour
 				this.StartPoint : (Vector2)this.transform.position, this.MaximumRadius);
 			if (UnityEditor.EditorApplication.isPlaying)
 			{
-				Gizmos.color = Color.red;
+				Gizmos.color = this.IsResting ? Color.green : Color.red;
 				Gizmos.DrawSphere(this.WanderPoint, 1);
 			}
 		}
