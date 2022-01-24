@@ -256,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 147412714}
     - target: {fileID: 7746805334533729988, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7746805334695845096, guid: 22cd67f195605ef46a94bea3356f728b, type: 3}
       propertyPath: m_RootOrder
@@ -502,18 +502,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1188570835253388897, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1188570835253388897, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1188570835253388897, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 258112409
-      objectReference: {fileID: 0}
     - target: {fileID: 1945336416886018619, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
       propertyPath: m_Name
       value: Power Up
@@ -561,10 +549,6 @@ PrefabInstance:
     - target: {fileID: 6458595443541263718, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626172830453790239, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b553b5a20be854b86051ce81c638d7, type: 3}
