@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c83153e43348744a1f8c60652c1e1c, type: 3}
   m_Name: Test Cipher Data
   m_EditorClassIdentifier: 
-  _passwords: []
-  _keys: []
+  _passwords:
+  - OPENTHEGATE
+  - LETMEINNOW
+  - IREQUIREENTRY
+  - LOOKADISTRACTION
+  - OPENSESAME
+  _keys:
+  - MELON
+  - KEY
+  - UNLOCK
+  - ELDER
+  - CANDY

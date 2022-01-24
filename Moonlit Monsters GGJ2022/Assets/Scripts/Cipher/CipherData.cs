@@ -20,7 +20,7 @@ public class CipherData : ScriptableObject
 	*/
 	private List<string> GetRandomWords(List<string> words, int num, ICollection<string> exclude)
 	{
-		words.RemoveAll(delegate(string word){return !exclude.Contains(word);});
+		words.RemoveAll(delegate(string word){return exclude.Contains(word);});
 		List<string> result = new List<string>();
 		int index;
 		while (num > result.Count && words.Count > 0)
@@ -96,8 +96,8 @@ public class CipherData : ScriptableObject
 		{
 			this.ValidateUnique(this._passwords, "passwords");
 			this.ValidateUnique(this._keys, "keys");
-			this.ValidateOnlyChars(this._passwords, CipherSet.LETTERS, "passwords");
-			this.ValidateOnlyChars(this._keys, CipherSet.LETTERS, "keys");
+			this.ValidateOnlyChars(this._passwords, CipherGroup.LETTERS, "passwords");
+			this.ValidateOnlyChars(this._keys, CipherGroup.LETTERS, "keys");
 		}
 	#endif
 }
