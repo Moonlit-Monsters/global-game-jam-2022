@@ -94,13 +94,10 @@ public class CipherData : ScriptableObject
 
 		private void OnValidate()
 		{
-			List<char> accepted = new List<char>(new char[]{'A','B','C','D','E','F','G','H','I',
-				'J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'
-			});
 			this.ValidateUnique(this._passwords, "passwords");
 			this.ValidateUnique(this._keys, "keys");
-			this.ValidateOnlyChars(this._passwords, accepted, "passwords");
-			this.ValidateOnlyChars(this._keys, accepted, "keys");
+			this.ValidateOnlyChars(this._passwords, CipherSet.LETTERS, "passwords");
+			this.ValidateOnlyChars(this._keys, CipherSet.LETTERS, "keys");
 		}
 	#endif
 }
