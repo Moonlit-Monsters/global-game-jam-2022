@@ -101,12 +101,12 @@ GameObject:
   - component: {fileID: 7626172830453790239}
   - component: {fileID: 2310757536425388299}
   m_Layer: 0
-  m_Name: Delusion
-  m_TagString: Delusion
+  m_Name: Reality
+  m_TagString: Reality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5714304546380817141
 Transform:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -203,8 +203,8 @@ GameObject:
   - component: {fileID: 1188570835253388897}
   - component: {fileID: 6627969396929413362}
   m_Layer: 0
-  m_Name: Reality
-  m_TagString: Reality
+  m_Name: Delusion
+  m_TagString: Delusion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +242,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
