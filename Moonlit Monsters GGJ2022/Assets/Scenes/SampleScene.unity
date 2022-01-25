@@ -130,22 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1432273928, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: _footstepSounds.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1432273928, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: _footstepSounds.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: ecc5c5ac062660e4890ace777b2d4c9d, type: 3}
-    - target: {fileID: 1432273928, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: _footstepSounds.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 4c697244dd6136743bc925a6d0117dda, type: 3}
-    - target: {fileID: 1432273928, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
-      propertyPath: _footstepSounds.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: ef3a584bf5a49654aa7549ca6529632e, type: 3}
     - target: {fileID: 3453216059614236634, guid: a75a90d731de13449a56758e8b8866e7, type: 3}
       propertyPath: m_Name
       value: Player
