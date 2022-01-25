@@ -101,8 +101,8 @@ GameObject:
   - component: {fileID: 7626172830453790239}
   - component: {fileID: 2310757536425388299}
   m_Layer: 0
-  m_Name: Delusion
-  m_TagString: Delusion
+  m_Name: Reality
+  m_TagString: Reality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,8 +203,8 @@ GameObject:
   - component: {fileID: 1188570835253388897}
   - component: {fileID: 6627969396929413362}
   m_Layer: 0
-  m_Name: Reality
-  m_TagString: Reality
+  m_Name: Delusion
+  m_TagString: Delusion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
