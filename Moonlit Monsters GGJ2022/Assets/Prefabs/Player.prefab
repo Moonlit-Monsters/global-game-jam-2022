@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8804389866742789954}
   m_Layer: 7
   m_Name: RealityForm
-  m_TagString: Untagged
+  m_TagString: Reality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1647213368874271158
 Transform:
   m_ObjectHideFlags: 0
