@@ -1,8 +1,25 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Collider2D))]
 public class DecipherMachine : MonoBehaviour
 {
+	[Header("Components")]
+
+	[SerializeField]
+	[Tooltip("The trigger that starts the deciphering process")]
+	private Collider2D _decipherTrigger;
+
+	public Collider2D DecipherTrigger
+	{
+		get
+		{
+			return this._decipherTrigger;
+		}
+	}
+
+	[Header("Settings")]
+
 	[SerializeField]
 	[Tooltip("The number of seconds between decipher steps")]
 	[Min(0)]
@@ -131,4 +148,26 @@ public class DecipherMachine : MonoBehaviour
 			this.OnComplete.Invoke();
 		}
 	}
+
+	private void OnTriggerEnter2D(Collider2D coll)
+	{
+		this.StartDecipher();
+	}
+
+	#if UNITY_EDITOR
+		private void OnValidate()
+		{
+			if (this.DecipherTrigger != null)
+			{
+				if (!this.DecipherTrigger.isTrigger)
+				{
+					Debug.LogError("Decipher trigger must be a trigger");
+				}
+				if (this.DecipherTrigger.gameObject != this.gameObject)
+				{
+					Debug.LogError("Decipher trigger must be on same agme object as decipher machine");
+				}
+			}
+		}
+	#endif
 }

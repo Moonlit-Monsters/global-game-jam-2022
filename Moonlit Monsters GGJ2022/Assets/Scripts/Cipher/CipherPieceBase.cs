@@ -5,22 +5,6 @@ public abstract class CipherPieceBase : MonoBehaviour
 	/** The group this cipher piece is part of */
 	public CipherGroup Group {get; set;} = null;
 
-	// private void OnDestroy()
-	// {
-	// 	if (this.Group.PasswordItem == this)
-	// 	{
-	// 		this.Group.PasswordItem = null;
-	// 	}
-	// 	if (this.Group.KeyItem == this)
-	// 	{
-	// 		this.Group.KeyItem = null;
-	// 	}
-	// 	if (this.Group.Gates.Contains(this))
-	// 	{
-	// 		this.Group.Gates.RemoveAll(this);
-	// 	}
-	// }
-
 	#if UNITY_EDITOR
 		private void OnValidate()
 		{

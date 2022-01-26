@@ -65,9 +65,7 @@ public class CipherGroup
 	public void AssignPassword(string password, string key)
 	{
 		this.Plaintext = password;
-		Debug.Log("Password: " + this.Plaintext);
 		this.Key = key;
-		Debug.Log("Key: " + this.Key);
 		List<int> plaintext_indices = this.StringToIndices(password);
 		List<int> key_indices = this.StringToIndices(key);
 		List<int> ciphertext_indices = new List<int>(plaintext_indices.Count);
@@ -77,7 +75,6 @@ public class CipherGroup
 				+ (key_indices[i % key_indices.Count])) % CipherGroup.LETTERS.Count);
 		}
 		this.Ciphertext = this.IndicesToString(ciphertext_indices);
-		Debug.Log("Ciphertext: " + this.Ciphertext);
 	}
 
 	/** Covert given string to list of indices corresponding to LETTERS
