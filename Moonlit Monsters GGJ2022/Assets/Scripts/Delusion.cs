@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Delusion : MonoBehaviour
 {
@@ -63,6 +64,7 @@ public class Delusion : MonoBehaviour
 	[SerializeField]
 	[Tooltip("The events invoked when the amount of delusion is modified")]
 	public UnityEvent<float> OnChange;
+
 
 	private void Awake()
 	{
