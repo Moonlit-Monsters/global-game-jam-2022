@@ -55,6 +55,9 @@ public class CipherGroup
 	/** The encrypted password found in the password item */
 	public string Ciphertext {get; private set;}
 
+	/** Whether the password has been deciphered */
+	public bool IsDeciphered {get; set;} = false;
+
 	/** Assign the password and key for this group
 	\param password The decrypted password used to unlock gates in this group
 	\param key The key word contained in the key item of this group
