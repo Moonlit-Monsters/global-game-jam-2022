@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1190714562}
   - component: {fileID: 1190714561}
   - component: {fileID: 3680389668770053092}
-  - component: {fileID: 1190714563}
   - component: {fileID: 2760951913922152548}
   m_Layer: 5
   m_Name: Blackout
@@ -93,21 +92,6 @@ MonoBehaviour:
   _blackoutImage: {fileID: 1190714561}
   _fadeOutRate: 20
   _fadeInRate: 2
---- !u!114 &1190714563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190714559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3ba453740dd6a640b6110634548ae14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _delusion: {fileID: 0}
-  _blackoutTransition: {fileID: 3680389668770053092}
-  _countdownTrack: {fileID: 2760951913922152548}
 --- !u!82 &2760951913922152548
 AudioSource:
   m_ObjectHideFlags: 0
@@ -118,7 +102,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5367182993866351764, guid: 49d783ad90ce47d4ba757c2dbcac332a, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2eb45847e980cbe4a9ad594a589fe88c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 12f1b2f22c732a043b7ebed8d7cc72e8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
