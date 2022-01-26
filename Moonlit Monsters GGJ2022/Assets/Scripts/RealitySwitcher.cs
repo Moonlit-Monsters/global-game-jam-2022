@@ -76,7 +76,6 @@ public class RealitySwitcher : MonoBehaviour
 	{
 		if (!this.IsReality)
 		{
-			Debug.Log("Entering reality");
 			this.IsReality = true;
 			this.Transition();
 			this.OnEnterReality.Invoke();
@@ -88,7 +87,6 @@ public class RealitySwitcher : MonoBehaviour
 	{
 		if (this.IsReality)
 		{
-			Debug.Log("Entering delusion");
 			this.IsReality = false;
 			this.Transition();
 			this.OnEnterDelusion.Invoke();
@@ -110,7 +108,7 @@ public class RealitySwitcher : MonoBehaviour
 	{
 		foreach (GameObject obj in objects)
 		{
-			Debug.Log((activate ? "Activating: " : "Deactivating: ") + obj.name);
+			//Debug.Log((activate ? "Activating: " : "Deactivating: ") + obj.name);
 			obj.SetActive(activate);
 		}
 	}

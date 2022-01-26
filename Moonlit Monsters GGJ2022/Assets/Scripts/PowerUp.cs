@@ -59,5 +59,6 @@ public class PowerUp : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D coll)
 	{
 		this.Collect(coll.gameObject.GetComponent<Delusion>());
+		coll.gameObject.GetComponent<DelusionEffects>()?.StopCountdownTrack();
 	}
 }
