@@ -24,6 +24,6 @@ public class DelusionMeter : MonoBehaviour
 	*/
 	private void UpdateMeter(float value)
 	{
-		this._slider.currentPercent = value;
+		this._slider.currentPercent = value / _source.Maximum * 100f;
 	}
 }

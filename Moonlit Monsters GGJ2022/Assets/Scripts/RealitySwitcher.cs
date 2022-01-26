@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 public class RealitySwitcher : MonoBehaviour
 {
@@ -14,9 +15,25 @@ public class RealitySwitcher : MonoBehaviour
 	[Tooltip("The tags to only enable when in reality")]
 	private List<string> _realityTags;
 
+	public ReadOnlyCollection<string> RealityTags
+	{
+		get
+		{
+			return this._realityTags.AsReadOnly();
+		}
+	}
+
 	[SerializeField]
 	[Tooltip("The tags to only enable when in delusion")]
 	private List<string> _delusionTags;
+
+	public ReadOnlyCollection<string> DelusionTags
+	{
+		get
+		{
+			return this._delusionTags.AsReadOnly();
+		}
+	}
 
 	[Header("Events")]
 
@@ -33,6 +50,26 @@ public class RealitySwitcher : MonoBehaviour
 
 	/** Whether the player is in reality */
 	public bool IsReality {get; private set;} = true;
+
+	private List<GameObject> _realityObjects;
+	/** The game objects that are a part of reality */
+	public ReadOnlyCollection<GameObject> RealityObjects
+	{
+		get
+		{
+			return this._realityObjects.AsReadOnly();
+		}
+	}
+
+	private List<GameObject> _delusionObjects;
+	/** The game objects that are part of delusion */
+	public ReadOnlyCollection<GameObject> DelusionObjects
+	{
+		get
+		{
+			return this._delusionObjects.AsReadOnly();
+		}
+	}
 
 	/** Transition to reality if not there already */
 	public void SwitchToReality()
@@ -59,25 +96,34 @@ public class RealitySwitcher : MonoBehaviour
 	/** Transition between reality and delusion */
 	private void Transition()
 	{
-		this.ControlObjectsWithTags(this._realityTags, this.IsReality);
-		this.ControlObjectsWithTags(this._delusionTags, !this.IsReality);
+		this.ControlObjects(this.RealityObjects, this.IsReality);
+		this.ControlObjects(this.DelusionObjects, !this.IsReality);
 	}
 
 	/** Set the active status of gameobjects with at least one of the given tags to the given status
-	\param tags The tags to search for on game objects
+	\param objects The game objects to control
 	\param activate Whether the found game objects should be activated
 	*/
-	private void ControlObjectsWithTags(List<string> tags, bool activate)
+	private void ControlObjects(ICollection<GameObject> objects, bool activate)
+	{
+		foreach (GameObject obj in objects)
+		{
+			//Debug.Log((activate ? "Activating: " : "Deactivating: ") + obj.name);
+			obj.SetActive(activate);
+		}
+	}
+
+	/** Find all the game objects with one of the given tags
+	\param tags The tags to search for
+	*/
+	private List<GameObject> FindObjectsWithTags(ICollection<string> tags)
 	{
 		List<GameObject> objects = new List<GameObject>();
 		foreach (string tag in tags)
 		{
 			objects.AddRange(GameObject.FindGameObjectsWithTag(tag));
 		}
-		foreach (GameObject obj in objects)
-		{
-			obj.SetActive(activate);
-		}
+		return objects;
 	}
 
 	/** Set this as the singleton instance or destroy it if instance is already set */
@@ -122,6 +168,9 @@ public class RealitySwitcher : MonoBehaviour
 	{
 		this.SetSinglton();
 		this._sourceDelusion.OnChange.AddListener(this.OnSourceChange);
+		this._realityObjects = this.FindObjectsWithTags(this.RealityTags);
+		this._delusionObjects = this.FindObjectsWithTags(this.DelusionTags);
+		this.Transition();
 	}
 
 	private void OnDestroy()
