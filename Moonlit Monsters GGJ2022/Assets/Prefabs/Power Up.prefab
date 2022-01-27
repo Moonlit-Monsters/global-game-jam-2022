@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1602906220494887200}
   - component: {fileID: 6880544225967377825}
   - component: {fileID: 1799622505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Power Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 5714304546380817141}
   - component: {fileID: 7626172830453790239}
   - component: {fileID: 2310757536425388299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Reality
   m_TagString: Reality
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 7326597462613537973}
   - component: {fileID: 1188570835253388897}
   - component: {fileID: 6627969396929413362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Delusion
   m_TagString: Delusion
   m_Icon: {fileID: 0}

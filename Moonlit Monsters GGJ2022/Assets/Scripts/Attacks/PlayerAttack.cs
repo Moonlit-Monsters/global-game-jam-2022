@@ -46,7 +46,10 @@ public class PlayerAttack : MonoBehaviour
 	/** Trigger the player's attack */
 	private void TriggerAttack(InputAction.CallbackContext context)
 	{
-		this.Attack.enabled = true;
+		if (!this.Attack.enabled)
+		{
+			this.Attack.enabled = true;
+		}
 	}
 
 	private void Awake()

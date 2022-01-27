@@ -165,6 +165,8 @@ public class Attack : MonoBehaviour
 	/** Disable this */
 	private void Stop()
 	{
+		this.enabled = false;
+		this.CurrentState = AttackState.Inactive;
 		this.OnAttackDone.Invoke();
 	}
 

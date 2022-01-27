@@ -72,6 +72,7 @@ public class MasterAI : MonoBehaviour
 		this.Wander.gameObject.SetActive(this.CurrentState == MasterState.Wander);
 		this.Pursue.gameObject.SetActive(this.CurrentState == MasterState.Pursue);
 		this.Attack.gameObject.SetActive(this.CurrentState == MasterState.Attack);
+		this.Attack.enabled = this.CurrentState == MasterState.Attack;
 	}
 
 	/** Switch to the wander state */
@@ -79,7 +80,6 @@ public class MasterAI : MonoBehaviour
 	{
 		if (this.CurrentState != MasterState.Wander)
 		{
-			Debug.Log("switch to wander");
 			this.CurrentState = MasterState.Wander;
 			this.ToggleBehaviours();
 		}
@@ -90,7 +90,6 @@ public class MasterAI : MonoBehaviour
 	{
 		if (this.CurrentState != MasterState.Pursue)
 		{
-			Debug.Log("switch to pursue");
 			this.CurrentState = MasterState.Pursue;
 			this.ToggleBehaviours();
 		}
@@ -101,7 +100,6 @@ public class MasterAI : MonoBehaviour
 	{
 		if (this.CurrentState != MasterState.Attack)
 		{
-			Debug.Log("switch to attack");
 			this.CurrentState = MasterState.Attack;
 			this.ToggleBehaviours();
 		}
@@ -112,7 +110,6 @@ public class MasterAI : MonoBehaviour
 	{
 		if (this.CurrentState != MasterState.Stunned)
 		{
-			Debug.Log("switch to stunned");
 			this.CurrentState = MasterState.Stunned;
 			this.ToggleBehaviours();
 		}
@@ -136,7 +133,6 @@ public class MasterAI : MonoBehaviour
 	{
 		this.StartPoint = this.transform.position;
 		this.CurrentState = RealitySwitcher.Instance.IsReality ? MasterState.Pursue : MasterState.Wander;
-		Debug.Log(this.CurrentState);
 		this.ToggleBehaviours();
 	}
 
@@ -151,7 +147,6 @@ public class MasterAI : MonoBehaviour
 			&& this.Pursue.CurrentState == PursueAI.PersueState.Persuing
 			&& Vector2.Distance(this.Pursue.Rb.position, this.Pursue.CurrentTarget.position) <= this.Pursue.Nav.stoppingDistance)
 		{
-			Debug.Log("persue -> attack");
 			this.SwitchToAttack();
 		}
 	}

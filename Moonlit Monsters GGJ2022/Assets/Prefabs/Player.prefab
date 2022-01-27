@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 147412716}
   - component: {fileID: 8719933651441772523}
   - component: {fileID: 7260524943383312149}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5554,8 +5554,8 @@ GameObject:
   - component: {fileID: 4434941245304681905}
   - component: {fileID: 1597411564191604949}
   - component: {fileID: 2954094963964356373}
-  m_Layer: 0
-  m_Name: Attack
+  m_Layer: 9
+  m_Name: Player Attack
   m_TagString: Reality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5605,7 +5605,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 2
 --- !u!114 &1597411564191604949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5619,9 +5619,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitTrigger: {fileID: 4434941245304681905}
-  _windUpTime: 0
-  _holdTime: 0
-  _windDownTime: 0
+  _windUpTime: 0.1
+  _holdTime: 0.2
+  _windDownTime: 0.1
   _onStateChange:
     m_PersistentCalls:
       m_Calls: []
@@ -5649,4 +5649,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa7aaddf9f6f894d8769edf108d146d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _duration: 0.5
+  _duration: 1
