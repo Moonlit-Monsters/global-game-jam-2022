@@ -49,7 +49,7 @@ public class RealitySwitcher : MonoBehaviour
 	public static RealitySwitcher Instance {get; private set;} = null;
 
 	/** Whether the player is in reality */
-	public bool IsReality {get; private set;} = true;
+	public bool IsReality {get; private set;} = false;
 
 	private List<GameObject> _realityObjects;
 	/** The game objects that are a part of reality */

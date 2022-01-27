@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D))]
-public class WanderAI : MonoBehaviour
+public class WanderAI : SlaveAIBase
 {
 	[Header("Components")]
 
@@ -21,6 +21,19 @@ public class WanderAI : MonoBehaviour
 	[Header("Wander Settings")]
 
 	[SerializeField]
+	[Tooltip("How quickly the center point drifts back to the start point")]
+	[Min(0)]
+	private float _centerDriftSpeed;
+
+	public float CenterDriftSpeed
+	{
+		get
+		{
+			return this._centerDriftSpeed;
+		}
+	}
+
+	[SerializeField]
 	[Tooltip("The minimum distance this can be from its wander point before wandering somwhere else")]
 	[Min(0)]
 	private float _distanceTolerance = .01f;
@@ -34,7 +47,7 @@ public class WanderAI : MonoBehaviour
 	}
 
 	[SerializeField]
-	[Tooltip("The minimum radius this can wander from its start point")]
+	[Tooltip("The minimum radius this can wander from its center point")]
 	[Min(0)]
 	private float _minimumRadius;
 
@@ -47,7 +60,7 @@ public class WanderAI : MonoBehaviour
 	}
 
 	[SerializeField]
-	[Tooltip("The maximum radius this can wander from its start point")]
+	[Tooltip("The maximum radius this can wander from its center point")]
 	[Min(0)]
 	private float _maximumRadius;
 
@@ -137,8 +150,8 @@ public class WanderAI : MonoBehaviour
 		}
 	}
 
-	/** The point at which this started */
-	public Vector2 StartPoint {get; private set;}
+	/** The point around which this wanders */
+	public Vector2 CenterPoint {get; private set;}
 
 	/** The point this is currently wandering to */
 	public Vector2 WanderPoint {get; private set;}
@@ -153,7 +166,8 @@ public class WanderAI : MonoBehaviour
 	public void Wander()
 	{
 		this.IsResting = false;
-		this.WanderPoint = this.StartPoint + Random.insideUnitCircle 
+		this.CenterPoint += Vector2.ClampMagnitude(this.Master.StartPoint - this.CenterPoint, this.CenterDriftSpeed * Time.deltaTime);
+		this.WanderPoint = this.CenterPoint + Random.insideUnitCircle 
 			* Random.Range(this.MinimumRadius, this.MaximumRadius);
 		this.WanderSpeed = Random.Range(this.MinimumSpeed, this.MaximumSpeed);
 		this.CancelInvoke("Wander");
@@ -171,13 +185,14 @@ public class WanderAI : MonoBehaviour
 		this.OnRest.Invoke();
 	}
 
-	private void Awake()
+	public override void Initialise()
 	{
-		this.StartPoint = this.Rb.position;
+		this.CenterPoint = this.Master.StartPoint;
 	}
 
 	private void OnEnable()
 	{
+		this.CenterPoint = this.Rb.position;
 		this.Rest();
 	}
 
@@ -242,7 +257,7 @@ public class WanderAI : MonoBehaviour
 		{
 			Gizmos.color = Color.white;
 			Gizmos.DrawWireSphere(UnityEditor.EditorApplication.isPlaying ? 
-				this.StartPoint : (Vector2)this.transform.position, this.MaximumRadius);
+				this.CenterPoint : (Vector2)this.transform.position, this.MaximumRadius);
 			if (UnityEditor.EditorApplication.isPlaying)
 			{
 				Gizmos.color = this.IsResting ? Color.green : Color.red;

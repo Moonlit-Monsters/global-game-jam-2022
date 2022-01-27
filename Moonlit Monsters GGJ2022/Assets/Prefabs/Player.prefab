@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647213368874271158}
   - component: {fileID: 8804389866742789954}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: RealityForm
   m_TagString: Reality
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3039920016967951105}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CameraFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 1603296610}
   - component: {fileID: 1432273928}
   - component: {fileID: 1432273927}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7108997770012081166}
   - component: {fileID: 5344555632543970080}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: DelusionForm
   m_TagString: Delusion
   m_Icon: {fileID: 0}
@@ -379,6 +379,9 @@ GameObject:
   - component: {fileID: 880427106}
   - component: {fileID: 756076578208676259}
   - component: {fileID: 3322441220564760244}
+  - component: {fileID: 147412716}
+  - component: {fileID: 8719933651441772523}
+  - component: {fileID: 7260524943383312149}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -399,6 +402,7 @@ Transform:
   m_Children:
   - {fileID: 3039920018073576718}
   - {fileID: 3039920016967951105}
+  - {fileID: 8389745032117824851}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -534,6 +538,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 1c702290-0cc7-4e2d-8685-a4ba0d146d73
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b42138a4-2a41-47f3-82e7-90e3bd152433
+    m_ActionName: Player/Attack[/Keyboard/space,/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -620,6 +628,33 @@ MonoBehaviour:
   _delusion: {fileID: 3322441220564760244}
   _blackoutTransition: {fileID: 0}
   _countdownTrack: {fileID: 0}
+--- !u!210 &8719933651441772523
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453216059614236634}
+  m_Enabled: 1
+  m_SortingLayerID: -916598073
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+--- !u!114 &7260524943383312149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453216059614236634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac8e3fe4cd1c9e4fad6b05626448fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 756076578208676259}
+  _onDamage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6725375680547716394
 GameObject:
   m_ObjectHideFlags: 0
@@ -5506,3 +5541,112 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &7807398226215357374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8389745032117824851}
+  - component: {fileID: 483507303148909025}
+  - component: {fileID: 4434941245304681905}
+  - component: {fileID: 1597411564191604949}
+  - component: {fileID: 2954094963964356373}
+  m_Layer: 9
+  m_Name: Player Attack
+  m_TagString: Reality
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8389745032117824851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807398226215357374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3680498114521842175}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483507303148909025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807398226215357374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316ad2aefdca6e0418d34cd7f154e07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _input: {fileID: 3453216059614236632}
+  _attack: {fileID: 1597411564191604949}
+  _actionName: Player/Attack
+--- !u!58 &4434941245304681905
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807398226215357374}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!114 &1597411564191604949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807398226215357374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1032e4546c101df4fa3f579056df6a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitTrigger: {fileID: 4434941245304681905}
+  _windUpTime: 0.1
+  _holdTime: 0.2
+  _windDownTime: 0.1
+  _onStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+  _onStartSwing:
+    m_PersistentCalls:
+      m_Calls: []
+  _onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  _onStopSwing:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAttackDone:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2954094963964356373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807398226215357374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa7aaddf9f6f894d8769edf108d146d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1

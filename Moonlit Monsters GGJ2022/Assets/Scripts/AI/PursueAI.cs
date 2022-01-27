@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider2D))]
-public class PursueAI : MonoBehaviour
+public class PursueAI : SlaveAIBase
 {
 	[Header("Components")]
 
@@ -134,13 +134,10 @@ public class PursueAI : MonoBehaviour
 		}
 	}
 
-	/** The position at which this started */
-	public Vector2 StartPosition {get; private set;}
-
 	/** The target this is currently persuing */
 	public Transform CurrentTarget {get; private set;}
 
-	public enum Status
+	public enum PersueState
 	{
 		Returning,
 		Waiting,
@@ -148,7 +145,7 @@ public class PursueAI : MonoBehaviour
 	}
 
 	/** The current state of the AI */
-	public Status State {get; private set;}
+	public PersueState CurrentState {get; private set;}
 
 	/** Cast out for a new target
 	\return The found target
@@ -196,7 +193,7 @@ public class PursueAI : MonoBehaviour
 	public void Wait()
 	{
 		this.CurrentTarget = null;
-		this.State = Status.Waiting;
+		this.CurrentState = PersueState.Waiting;
 		this.Nav.ResetPath();
 		this.Rb.velocity = Vector2.zero;
 		this.CancelInvoke("Return");
@@ -208,8 +205,8 @@ public class PursueAI : MonoBehaviour
 	public void Return()
 	{
 		this.CurrentTarget = null;
-		this.State = Status.Returning;
-		this.Nav.SetDestination(this.StartPosition);
+		this.CurrentState = PersueState.Returning;
+		this.Nav.SetDestination(this.Master.StartPoint);
 		this.CancelInvoke("Return");
 		this.OnReturn.Invoke();
 	}
@@ -222,18 +219,18 @@ public class PursueAI : MonoBehaviour
 		if (target != null)
 		{
 			this.CurrentTarget = target;
-			this.State = Status.Persuing;
+			this.CurrentState = PersueState.Persuing;
 			this.Nav.SetDestination(target.position);
 			this.CancelInvoke("Return");
 			this.OnPersue.Invoke();
 		}
 	}
 
-	private void Awake()
+	public override void Initialise()
 	{
 		this.Nav.updateRotation = false;
 		this.Nav.updateUpAxis = false;
-		this.StartPosition = this.Rb.position;
+		this.Nav.transform.localRotation = Quaternion.identity;
 	}
 
 	private void OnTriggerEnter2D(Collider2D coll)
@@ -254,7 +251,7 @@ public class PursueAI : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (this.State == Status.Persuing)
+		if (this.CurrentState == PersueState.Persuing)
 		{
 			if (this.IsTargetInSight(this.CurrentTarget))
 			{
@@ -329,10 +326,10 @@ public class PursueAI : MonoBehaviour
 		/** Draw the start position gizmo */
 		private void DrawReturnGizmo()
 		{
-			if (UnityEditor.EditorApplication.isPlaying && this.State == Status.Returning)
+			if (UnityEditor.EditorApplication.isPlaying && this.CurrentState == PersueState.Returning)
 			{
 				Gizmos.color = Color.green;
-				Gizmos.DrawSphere(this.StartPosition, 1f);
+				Gizmos.DrawSphere(this.Master.StartPoint, 1f);
 			}
 		}
 
