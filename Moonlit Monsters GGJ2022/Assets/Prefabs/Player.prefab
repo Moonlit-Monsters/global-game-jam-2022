@@ -360,7 +360,7 @@ SpriteRenderer:
   m_Size: {x: 2.5, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3453216059614236634
@@ -379,8 +379,7 @@ GameObject:
   - component: {fileID: 880427106}
   - component: {fileID: 756076578208676259}
   - component: {fileID: 3322441220564760244}
-  - component: {fileID: 147412716}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
