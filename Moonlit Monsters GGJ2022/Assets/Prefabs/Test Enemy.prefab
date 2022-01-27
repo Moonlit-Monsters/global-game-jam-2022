@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 2480708425450864566}
   - component: {fileID: 2480708425450864564}
   - component: {fileID: 7461323737349926809}
+  - component: {fileID: 4507448253038404033}
   m_Layer: 7
   m_Name: Test Enemy
   m_TagString: Untagged
@@ -243,6 +244,25 @@ MonoBehaviour:
   _onStun:
     m_PersistentCalls:
       m_Calls: []
+  _onStunOver:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4507448253038404033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2480708425450864520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3152e7be3515c59449c49cdbbc0cf389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wander: {fileID: 2480708424191232542}
+  _pursue: {fileID: 2480708425527580959}
+  _attack: {fileID: 289516750991444202}
+  _stun: {fileID: 7461323737349926809}
 --- !u!1 &2480708425527580946
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +437,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recoveryRate: 1
   _onStun:
+    m_PersistentCalls:
+      m_Calls: []
+  _onStunOver:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &6421098397310551135

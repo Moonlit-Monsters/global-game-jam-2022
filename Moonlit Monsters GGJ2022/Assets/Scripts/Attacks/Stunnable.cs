@@ -27,6 +27,18 @@ public class Stunnable : MonoBehaviour
 		}
 	}
 
+	[SerializeField]
+	[Tooltip("The methods invoke when this is no longer stunned")]
+	private UnityEvent _onStunOver;
+
+	public UnityEvent OnStunOver
+	{
+		get
+		{
+			return this._onStunOver;
+		}
+	}
+
 	/** How many seconds this is stunned for */
 	public float Duration {get; private set;}
 
@@ -44,6 +56,15 @@ public class Stunnable : MonoBehaviour
 
 	private void Update()
 	{
+		if (this.Duration <= this.RecoveryRate * Time.deltaTime)
+		{
+			this.OnStunOver.Invoke();
+		}
 		this.Duration = Mathf.Max(0, this.Duration - this.RecoveryRate * Time.deltaTime);
+	}
+
+	private void OnDisable()
+	{
+		this.Duration = 0;
 	}
 }
