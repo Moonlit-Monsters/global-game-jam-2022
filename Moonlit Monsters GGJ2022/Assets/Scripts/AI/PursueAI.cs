@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider2D))]
-public class PursueAI : MonoBehaviour
+public class PursueAI : SlaveAIBase
 {
 	[Header("Components")]
 
@@ -134,9 +134,6 @@ public class PursueAI : MonoBehaviour
 		}
 	}
 
-	/** The position at which this started */
-	public Vector2 StartPosition {get; private set;}
-
 	/** The target this is currently persuing */
 	public Transform CurrentTarget {get; private set;}
 
@@ -209,7 +206,7 @@ public class PursueAI : MonoBehaviour
 	{
 		this.CurrentTarget = null;
 		this.CurrentState = PersueState.Returning;
-		this.Nav.SetDestination(this.StartPosition);
+		this.Nav.SetDestination(this.Master.StartPoint);
 		this.CancelInvoke("Return");
 		this.OnReturn.Invoke();
 	}
@@ -229,11 +226,11 @@ public class PursueAI : MonoBehaviour
 		}
 	}
 
-	private void Awake()
+	public override void Initialise()
 	{
 		this.Nav.updateRotation = false;
 		this.Nav.updateUpAxis = false;
-		this.StartPosition = this.Rb.position;
+		this.Nav.transform.localRotation = Quaternion.identity;
 	}
 
 	private void OnTriggerEnter2D(Collider2D coll)
@@ -332,7 +329,7 @@ public class PursueAI : MonoBehaviour
 			if (UnityEditor.EditorApplication.isPlaying && this.CurrentState == PersueState.Returning)
 			{
 				Gizmos.color = Color.green;
-				Gizmos.DrawSphere(this.StartPosition, 1f);
+				Gizmos.DrawSphere(this.Master.StartPoint, 1f);
 			}
 		}
 

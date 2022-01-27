@@ -63,62 +63,95 @@ public class MasterAI : MonoBehaviour
 	/** The current state this is in */
 	public MasterState CurrentState {get; private set;}
 
+	/** The point at which this started */
+	public Vector2 StartPoint {get; private set;}
+
 	/** Toggle the specified behaviours according to the current state */
 	private void ToggleBehaviours()
 	{
-		this.Wander.enabled = this.CurrentState == MasterState.Wander;
-		this.Pursue.enabled = this.CurrentState == MasterState.Pursue;
-		this.Attack.enabled = this.CurrentState == MasterState.Attack;
+		this.Wander.gameObject.SetActive(this.CurrentState == MasterState.Wander);
+		this.Pursue.gameObject.SetActive(this.CurrentState == MasterState.Pursue);
+		this.Attack.gameObject.SetActive(this.CurrentState == MasterState.Attack);
 	}
 
 	/** Switch to the wander state */
 	public void SwitchToWander()
 	{
-		this.CurrentState = MasterState.Wander;
-		this.ToggleBehaviours();
+		if (this.CurrentState != MasterState.Wander)
+		{
+			Debug.Log("switch to wander");
+			this.CurrentState = MasterState.Wander;
+			this.ToggleBehaviours();
+		}
 	}
 
 	/** Switch to the persue state */
 	public void SwitchToPursue()
 	{
-		this.CurrentState = MasterState.Pursue;
-		this.ToggleBehaviours();
+		if (this.CurrentState != MasterState.Pursue)
+		{
+			Debug.Log("switch to pursue");
+			this.CurrentState = MasterState.Pursue;
+			this.ToggleBehaviours();
+		}
 	}
 
 	/** Switch to the attack state */
 	public void SwitchToAttack()
 	{
-		this.CurrentState = MasterState.Attack;
-		this.ToggleBehaviours();
+		if (this.CurrentState != MasterState.Attack)
+		{
+			Debug.Log("switch to attack");
+			this.CurrentState = MasterState.Attack;
+			this.ToggleBehaviours();
+		}
 	}
 
 	/** Switch to the stunned state */
 	public void SwitchToStunned()
 	{
-		this.CurrentState = MasterState.Stunned;
-		this.ToggleBehaviours();
+		if (this.CurrentState != MasterState.Stunned)
+		{
+			Debug.Log("switch to stunned");
+			this.CurrentState = MasterState.Stunned;
+			this.ToggleBehaviours();
+		}
 	}
 
 	private void Awake()
 	{
+		this.StartPoint = this.transform.position;
+		this.Pursue.Master = this;
+		this.Wander.Master = this;
+		this.Pursue.Initialise();
+		this.Wander.Initialise();
 		RealitySwitcher.Instance.OnEnterReality.AddListener(this.SwitchToPursue);
 		RealitySwitcher.Instance.OnEnterDelusion.AddListener(this.SwitchToWander);
 		this.Stun.OnStun.AddListener(this.SwitchToStunned);
 		this.Stun.OnStunOver.AddListener(this.SwitchToPursue);
+		this.Attack.OnAttackDone.AddListener(this.SwitchToPursue);
+	}
+
+	private void OnEnable()
+	{
+		this.StartPoint = this.transform.position;
 		this.CurrentState = RealitySwitcher.Instance.IsReality ? MasterState.Pursue : MasterState.Wander;
+		Debug.Log(this.CurrentState);
+		this.ToggleBehaviours();
+	}
+
+	private void OnDisable()
+	{
+		this.CurrentState = MasterState.Stunned;
 	}
 
 	private void Update()
 	{
-		if (this.CurrentState == MasterState.Attack 
-			&& !this.Attack.enabled)
-		{
-			this.SwitchToPursue();
-		}
-		else if (this.CurrentState == MasterState.Pursue 
+		if (this.CurrentState == MasterState.Pursue 
 			&& this.Pursue.CurrentState == PursueAI.PersueState.Persuing
 			&& Vector2.Distance(this.Pursue.Rb.position, this.Pursue.CurrentTarget.position) <= this.Pursue.Nav.stoppingDistance)
 		{
+			Debug.Log("persue -> attack");
 			this.SwitchToAttack();
 		}
 	}

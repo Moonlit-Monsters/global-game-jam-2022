@@ -56,7 +56,7 @@ public class Stunnable : MonoBehaviour
 
 	private void Update()
 	{
-		if (this.Duration <= this.RecoveryRate * Time.deltaTime)
+		if (this.Duration > 0 && this.Duration <= this.RecoveryRate * Time.deltaTime)
 		{
 			this.OnStunOver.Invoke();
 		}

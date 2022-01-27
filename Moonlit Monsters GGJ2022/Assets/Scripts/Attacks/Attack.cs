@@ -62,6 +62,18 @@ public class Attack : MonoBehaviour
 	[Header("Events")]
 
 	[SerializeField]
+	[Tooltip("The methods invoked when the state changes")]
+	private UnityEvent<AttackState> _onStateChange;
+
+	public UnityEvent<AttackState> OnStateChange
+	{
+		get
+		{
+			return this._onStateChange;
+		}
+	}
+
+	[SerializeField]
 	[Tooltip("The methods invoked when the hit trigger becomes active")]
 	private UnityEvent _onStartSwing;
 
@@ -97,6 +109,18 @@ public class Attack : MonoBehaviour
 		}
 	}
 
+	[SerializeField]
+	[Tooltip("The methods invoked when the attack is done winding down")]
+	private UnityEvent _onAttackDone;
+
+	public UnityEvent OnAttackDone
+	{
+		get
+		{
+			return this._onAttackDone;
+		}
+	}
+
 	public enum AttackState
 	{
 		Inactive,
@@ -105,7 +129,20 @@ public class Attack : MonoBehaviour
 		WindDown
 	}
 
-	public AttackState CurrentState {get; private set;}
+	private AttackState _currentState;
+	/** The current state of the attack */
+	public AttackState CurrentState 
+	{
+		get
+		{
+			return this._currentState;
+		} 
+		private set
+		{
+			this._currentState = value;
+			this.OnStateChange.Invoke(value);
+		}
+	}
 
 	/** Start the active portion of the attack */
 	private void StartSwing()
@@ -128,7 +165,7 @@ public class Attack : MonoBehaviour
 	/** Disable this */
 	private void Stop()
 	{
-		this.enabled = false;
+		this.OnAttackDone.Invoke();
 	}
 
 	private void OnEnable()
