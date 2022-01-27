@@ -15,9 +15,9 @@ TagManager:
   - UI
   - Environment
   - NPC
-  - 
-  - 
-  - 
+  - Item
+  - Player Attack
+  - Enemy Attack
   - 
   - 
   - 
@@ -48,6 +48,9 @@ TagManager:
     locked: 0
   - name: NPC
     uniqueID: 258112409
+    locked: 0
+  - name: Item
+    uniqueID: 3705410619
     locked: 0
   - name: Player
     uniqueID: 3378369223
