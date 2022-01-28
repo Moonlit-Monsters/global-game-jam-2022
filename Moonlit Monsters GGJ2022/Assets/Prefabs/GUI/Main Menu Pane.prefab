@@ -615,7 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac33b0ccaa6770f4db1c4bd7b447dd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scenePath: Assets/Scenes/SampleScene.unity
+  _scenePath: Assets/Scenes/Level.unity
   _mode: 0
   _loadingScenePath: Assets/Scenes/Loading.unity
 --- !u!82 &1156789891170060766
