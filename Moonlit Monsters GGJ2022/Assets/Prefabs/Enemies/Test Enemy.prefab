@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 2480708425450864567}
   - component: {fileID: 2480708425450864521}
   - component: {fileID: 2480708425450864566}
-  - component: {fileID: 2480708425450864564}
   - component: {fileID: 4507448253038404033}
   m_Layer: 7
   m_Name: Test Enemy
@@ -162,17 +161,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!210 &2480708425450864564
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2480708425450864520}
-  m_Enabled: 1
-  m_SortingLayerID: 258112409
-  m_SortingLayer: 2
-  m_SortingOrder: 0
 --- !u!114 &4507448253038404033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8761523937357243623}
+  - component: {fileID: 671581103446503591}
   m_Layer: 7
   m_Name: Sprites
   m_TagString: Untagged
@@ -383,6 +372,17 @@ Transform:
   m_Father: {fileID: 2480708425450864567}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &671581103446503591
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877618923000574546}
+  m_Enabled: 1
+  m_SortingLayerID: 258112409
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!1 &6421098397310551135
 GameObject:
   m_ObjectHideFlags: 0
