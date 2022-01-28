@@ -164,7 +164,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 61a2f9a9c8fd61d4aa0eebad3ef0413a, type: 3}
   - {fileID: 8300000, guid: b877052fe5901144584f91fb554751ed, type: 3}
   - {fileID: 8300000, guid: b1a6cfaffae30a643b765688e6ece436, type: 3}
-  _playerAudioSource: {fileID: 0}
+  _playerAudioSource: {fileID: 2421636733659815172}
 --- !u!82 &2421636733659815172
 AudioSource:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 61a2f9a9c8fd61d4aa0eebad3ef0413a, type: 3}
   - {fileID: 8300000, guid: b877052fe5901144584f91fb554751ed, type: 3}
   - {fileID: 8300000, guid: b1a6cfaffae30a643b765688e6ece436, type: 3}
-  _playerAudioSource: {fileID: 0}
+  _playerAudioSource: {fileID: 1432273927}
 --- !u!82 &1432273927
 AudioSource:
   m_ObjectHideFlags: 0
@@ -767,6 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bde9a11168b13b43a9a126d50dd907d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 3997102111192497142}
   _entityAnimator: {fileID: 1603296610}
   _x: x
   _y: y
