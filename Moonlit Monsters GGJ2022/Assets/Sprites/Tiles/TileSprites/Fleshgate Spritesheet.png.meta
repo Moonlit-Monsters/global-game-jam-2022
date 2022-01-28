@@ -111,8 +111,27 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: 41, y: -5}
+        - {x: 40, y: 5}
+        - {x: 44, y: 9}
+        - {x: 44, y: 14}
+        - {x: 42, y: 22}
+        - {x: 42, y: 30}
+        - {x: 39, y: 34}
+        - {x: 33, y: 34}
+        - {x: 31, y: 40}
+        - {x: 23, y: 49}
+        - {x: 13, y: 50}
+        - {x: 5, y: 53}
+        - {x: -7, y: 53}
+        - {x: -18, y: 52}
+        - {x: -23, y: 49}
+        - {x: -31, y: 40}
+        - {x: -43, y: 28}
+        - {x: -44, y: 17}
+        - {x: -44, y: 2}
+      tessellationDetail: 0.36
       bones: []
       spriteID: 6a6ce0ca7407fcd70800000000000000
       internalID: 9065588028051736230
@@ -132,8 +151,20 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: 39, y: -4}
+        - {x: 37, y: 6}
+        - {x: 41, y: 10}
+        - {x: 41, y: 15}
+        - {x: 39, y: 31}
+        - {x: 36, y: 35}
+        - {x: 29, y: 36}
+        - {x: -32, y: 37}
+        - {x: -38, y: 37}
+        - {x: -45, y: 33}
+        - {x: -48, y: 18}
+        - {x: -48, y: -11}
+      tessellationDetail: 0.34
       bones: []
       spriteID: c40e575715538dab0800000000000000
       internalID: -4983174363706171316
@@ -153,8 +184,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: -43, y: -9}
+        - {x: -44, y: 38}
+        - {x: -28, y: 38}
+        - {x: -30, y: -10}
+      - - {x: 24, y: -12}
+        - {x: 24, y: 38}
+        - {x: 37, y: 38}
+        - {x: 37, y: -12}
+      tessellationDetail: 0.58
       bones: []
       spriteID: 6d267acdf9ade6d60800000000000000
       internalID: 7885480377708929750
