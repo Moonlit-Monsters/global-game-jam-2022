@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6581067384393184587
 Transform:
@@ -117,7 +117,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6801136939839272650
 Transform:
@@ -187,7 +187,7 @@ GameObject:
   m_TagString: Delusion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6801136939968085405
 Transform:
@@ -269,7 +269,7 @@ GameObject:
   m_TagString: Reality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6801136940699538273
 Transform:
@@ -345,12 +345,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6801136940724585178}
+  - component: {fileID: 8277482006430610268}
   m_Layer: 6
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6801136940724585178
 Transform:
@@ -368,3 +369,14 @@ Transform:
   m_Father: {fileID: 6801136939839272650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &8277482006430610268
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6801136940724585181}
+  m_Enabled: 1
+  m_SortingLayerID: -1721386097
+  m_SortingLayer: 1
+  m_SortingOrder: 0
