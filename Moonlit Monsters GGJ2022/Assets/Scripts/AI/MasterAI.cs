@@ -66,8 +66,17 @@ public class MasterAI : MonoBehaviour
 		}
 	}
 
-	/** Whether this should not attack */
-	public bool Peaceful {get; private set;} = false;
+	[SerializeField]
+	[Tooltip("Whether this should not attack")]
+	private bool _peaceful = false;
+
+	public bool Peaceful
+	{
+		get
+		{
+			return this._peaceful;
+		}
+	}
 
 	public enum MasterState
 	{
@@ -117,6 +126,7 @@ public class MasterAI : MonoBehaviour
 	{
 		if (!this.Peaceful && this.CurrentState != MasterState.Attack)
 		{
+			Debug.Log("attack");
 			this.CurrentState = MasterState.Attack;
 			this.ToggleBehaviours();
 		}
@@ -150,7 +160,7 @@ public class MasterAI : MonoBehaviour
 	{
 		if (this.PeacefulSettingName.Length > 0)
 		{
-			this.Peaceful = PlayerPrefs.GetInt(this.PeacefulSettingName, this.Peaceful ? 1 : 0) != 0;
+			this._peaceful = PlayerPrefs.GetInt(this.PeacefulSettingName, this.Peaceful ? 1 : 0) != 0;
 		}
 		this.StartPoint = this.transform.position;
 		this.CurrentState = RealitySwitcher.Instance.IsReality ? MasterState.Pursue : MasterState.Wander;
