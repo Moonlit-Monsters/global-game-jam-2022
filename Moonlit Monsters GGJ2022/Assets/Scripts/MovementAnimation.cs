@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class MovementAnimation : MonoBehaviour
 {
+	[SerializeField]
+	[Tooltip("The rigidbody to get velocity from")]
+    private Rigidbody2D _rb;
+
+	public Rigidbody2D Rb
+	{
+		get
+		{
+			return this._rb;
+		}
+	}
+
     [SerializeField]
 	[Tooltip("The animator for the character's sprites")]
 	private Animator _entityAnimator;
@@ -40,18 +52,16 @@ public class MovementAnimation : MonoBehaviour
 		}
 	}
 
-    private Rigidbody2D _rb;
-
     private void Awake()
     {
-        this._rb = this.GetComponent<Rigidbody2D>();
+        this._rb ??= this.GetComponent<Rigidbody2D>();
         this._entityAnimator ??= this.gameObject.GetComponentInChildren<Animator>();
     }
 
     private void FixedUpdate()
     {
-        this.EntityAnimator.SetFloat(this.X, this._rb.velocity.x);
-        this.EntityAnimator.SetFloat(this.Y, this._rb.velocity.y);
+        this.EntityAnimator.SetFloat(this.X, this.Rb.velocity.x);
+        this.EntityAnimator.SetFloat(this.Y, this.Rb.velocity.y);
     }
 }
 

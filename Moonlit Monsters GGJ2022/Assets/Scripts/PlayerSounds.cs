@@ -30,7 +30,7 @@ public class PlayerSounds : MonoBehaviour
 
     private void Awake()
     {
-        _playerAudioSource = this.GetComponent<AudioSource>();
+        _playerAudioSource ??= this.GetComponent<AudioSource>();
     }
 
     private int PickClip(AudioClip[] clips)
