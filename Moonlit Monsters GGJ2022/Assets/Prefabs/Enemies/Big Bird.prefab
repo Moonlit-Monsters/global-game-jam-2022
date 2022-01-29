@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ae8146d1b95f9644d8b98f4942e72269, type: 3}
     - target: {fileID: 2480708425450864520, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
       propertyPath: m_Name
-      value: Bird Enemy
+      value: Big Bird
       objectReference: {fileID: 0}
     - target: {fileID: 2480708425450864566, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
       propertyPath: m_Speed
@@ -127,6 +127,26 @@ PrefabInstance:
       propertyPath: _amount
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8806512394932924d8d1c56e43c12f02, type: 3}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 40755d3fe68614141852c6fcb60cf228, type: 3}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5e0018f187248048a443162de462c90, type: 3}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: e2c7eb98e23cfdb4bb17f70638856fcb, type: 3}
     - target: {fileID: 7516641558201811287, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
       propertyPath: m_Size.x
       value: 1.4365158

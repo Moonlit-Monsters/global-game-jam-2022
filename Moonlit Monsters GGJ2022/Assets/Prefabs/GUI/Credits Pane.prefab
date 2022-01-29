@@ -301,7 +301,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -176}
+  m_SizeDelta: {x: 0, y: -282.858}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3208772561915944647
 MonoBehaviour:
@@ -323,9 +323,9 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 250, y: 250}
+  m_CellSize: {x: 190, y: 150}
   m_Spacing: {x: 0, y: 0}
-  m_Constraint: 1
+  m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &7212053228378951598
 GameObject:
@@ -712,10 +712,6 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 494652561327007408, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 494652561327007408, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
@@ -775,18 +771,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 494652561327007408, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 494652561327007408, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 494652561327007408, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1107436428468406143, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
       propertyPath: m_text
       value: '@deadly_pen_maniac (IG)'
@@ -813,6 +797,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4898201918254388460, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898201918254388460, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4898201918254388460, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
@@ -1142,6 +1130,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4898201918254388460, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898201918254388460, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1263,18 +1255,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 494652561327007408, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 494652561327007408, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 494652561327007408, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1107436428468406143, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
       propertyPath: m_text
       value: '@Soz_but_YEET (twt)'
@@ -1301,6 +1281,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4898201918254388460, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898201918254388460, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4898201918254388460, guid: ec415057e847f674e9d6d2d4c1524176, type: 3}

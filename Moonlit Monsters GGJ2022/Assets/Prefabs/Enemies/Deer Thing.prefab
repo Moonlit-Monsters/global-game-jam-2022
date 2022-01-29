@@ -139,6 +139,26 @@ PrefabInstance:
       propertyPath: _minimumWait
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 89215db068e6a1949ab709bddd2634d4, type: 3}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 05abe38273202bd458379e1c85a16aa8, type: 3}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: a680ab9183c6e4c42bb22127dca72351, type: 3}
+    - target: {fileID: 7390429672222391715, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
+      propertyPath: _clips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f21d21d0440232b49b4dbaabe50a597d, type: 3}
     - target: {fileID: 7397438048366991137, guid: 0657fc81fdab0ce46b22748dbc5a9bcc, type: 3}
       propertyPath: _recoveryRate
       value: 0.5

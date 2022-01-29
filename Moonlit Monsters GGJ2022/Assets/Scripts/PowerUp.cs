@@ -42,11 +42,11 @@ public class PowerUp : MonoBehaviour
 	*/
 	public void Collect(Delusion collector)
 	{
+		this.OnCollect.Invoke();
 		if (collector != null)
 		{
 			collector.Value += this.Value;
 		}
-		this.OnCollect.Invoke();
 		this.gameObject.SetActive(false);
 		Invoke("Reactivate", RespawnTime);
 	}
