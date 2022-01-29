@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MovementAnimation : MonoBehaviour
 {
@@ -13,6 +14,18 @@ public class MovementAnimation : MonoBehaviour
 		get
 		{
 			return this._rb;
+		}
+	}
+
+	[SerializeField]
+	[Tooltip("The nav mesh agent used to path find")]
+	private NavMeshAgent _nav;
+
+	public NavMeshAgent Nav
+	{
+		get
+		{
+			return this._nav;
 		}
 	}
 
@@ -58,10 +71,16 @@ public class MovementAnimation : MonoBehaviour
         this._entityAnimator ??= this.gameObject.GetComponentInChildren<Animator>();
     }
 
+	private Vector2 RigidbodyCheck()
+	{
+		if (this.Nav == null) { return this.Rb.velocity; }
+		return this.Rb.velocity.sqrMagnitude < this.Nav?.velocity.sqrMagnitude ? new Vector2(this.Nav.velocity.x, this.Nav.velocity.y) : this.Rb.velocity;
+	}
+
     private void FixedUpdate()
     {
-        this.EntityAnimator.SetFloat(this.X, this.Rb.velocity.x);
-        this.EntityAnimator.SetFloat(this.Y, this.Rb.velocity.y);
+        this.EntityAnimator.SetFloat(this.X, RigidbodyCheck().x);
+        this.EntityAnimator.SetFloat(this.Y, RigidbodyCheck().y);
     }
 }
 
