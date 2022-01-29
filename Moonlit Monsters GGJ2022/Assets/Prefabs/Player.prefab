@@ -310,6 +310,9 @@ GameObject:
   - component: {fileID: 147412716}
   - component: {fileID: 8719933651441772523}
   - component: {fileID: 7260524943383312149}
+  - component: {fileID: 3054507181313898063}
+  - component: {fileID: 4589316396870604514}
+  - component: {fileID: 3746026792749469374}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -583,6 +586,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: {fileID: 756076578208676259}
   _onDamage:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3054507181313898063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453216059614236634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4615b892383d24489d8d4fc022f5ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerHealth: {fileID: 756076578208676259}
+  _transition: {fileID: 3746026792749469374}
+  _sceneLoader: {fileID: 4589316396870604514}
+--- !u!114 &4589316396870604514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453216059614236634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac33b0ccaa6770f4db1c4bd7b447dd27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scenePath: 
+  _mode: 0
+  _loadingScenePath: Assets/Scenes/Loading.unity
+--- !u!114 &3746026792749469374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453216059614236634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa467b25634f59b41963055234713f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blackoutImage: {fileID: 0}
+  _fadeOutRate: 1
+  _fadeInRate: 1e+15
+  _onFadeOutDone:
+    m_PersistentCalls:
+      m_Calls: []
+  _onFadeInDone:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &5843875732515406734
