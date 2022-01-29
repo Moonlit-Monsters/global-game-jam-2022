@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 3e37246303021314a9ec008a45f41658
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3025152517926515689
+    second: rabbit sheet_0
+  - first:
+      213: 5034919273093184754
+    second: rabbit sheet_1
+  - first:
+      213: -1405799570049659635
+    second: rabbit sheet_2
+  - first:
+      213: -1056269231521171436
+    second: rabbit sheet_3
+  - first:
+      213: -7559219335597202289
+    second: rabbit sheet_4
+  - first:
+      213: -8565296589652541194
+    second: rabbit sheet_5
+  - first:
+      213: -6793903087263533466
+    second: rabbit sheet_6
+  - first:
+      213: 5806435355090676043
+    second: rabbit sheet_7
+  - first:
+      213: -7874765565844469026
+    second: rabbit sheet_8
+  - first:
+      213: -838416257256221111
+    second: rabbit sheet_9
+  - first:
+      213: -2416979736355036064
+    second: rabbit sheet_10
+  - first:
+      213: 7210131636059555468
+    second: rabbit sheet_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -65,7 +101,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -77,7 +113,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -89,7 +125,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: rabbit sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 451.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e37366ef208bf920800000000000000
+      internalID: 3025152517926515689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 451.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcbc791760afd540800000000000000
+      internalID: 5034919273093184754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_2
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 451.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d0bc14db89d7ce0800000000000000
+      internalID: -1405799570049659635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 301.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4187104fab06751f0800000000000000
+      internalID: -1056269231521171436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_4
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 301.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84e6729012481790800000000000000
+      internalID: -7559219335597202289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_5
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 301.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f045e1f124f12980800000000000000
+      internalID: -8565296589652541194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 151.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6663a35432537b1a0800000000000000
+      internalID: -6793903087263533466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_7
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 151.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49e27f013a949050800000000000000
+      internalID: 5806435355090676043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_8
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 151.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edacc5ea07637b290800000000000000
+      internalID: -7874765565844469026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946945c2bd85d54f0800000000000000
+      internalID: -838416257256221111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_10
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064ad394cb9257ed0800000000000000
+      internalID: -2416979736355036064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit sheet_11
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 1.5
+        width: 151
+        height: 150.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86c227a5888f0460800000000000000
+      internalID: 7210131636059555468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
