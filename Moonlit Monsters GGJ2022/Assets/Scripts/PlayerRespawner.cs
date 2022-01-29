@@ -29,7 +29,6 @@ public class PlayerRespawner : MonoBehaviour
 	/** Respawn the player by reloading the scene */
 	public void Respawn()
 	{
-		Debug.Log("respawn");
 		this._transition.OnFadeOutDone.AddListener(this.FadeOutDone);
 		this._transition.FadeOut();
 	}
@@ -37,7 +36,6 @@ public class PlayerRespawner : MonoBehaviour
 	/** Reload the scene once the transition is done */
 	private void FadeOutDone()
 	{
-		Debug.Log("respawn fade done");
 		this._transition.OnFadeOutDone.RemoveListener(this.FadeOutDone);
 		this._sceneLoader.LoadScene(SceneManager.GetActiveScene().path);
 	}
