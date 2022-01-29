@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class BlackoutTransition : MonoBehaviour
 {
-    [SerializeField]
+	[SerializeField]
 	[Tooltip("The image component on this Game Object")]
 	private Image _blackoutImage;
 
@@ -16,29 +16,29 @@ public class BlackoutTransition : MonoBehaviour
 		}
 	}
 
-    [SerializeField]
+	[SerializeField]
 	[Tooltip("The speed at which the screen fades to black")]
-    private float _fadeOutRate = 5f;
+	private float _fadeOutRate = 5f;
 
-    public float FadeOutRate
-    {
-        get
-        {
-            return this._fadeOutRate;
-        }
-    }
+	public float FadeOutRate
+	{
+		get
+		{
+			return this._fadeOutRate;
+		}
+	}
 
-    [SerializeField]
+	[SerializeField]
 	[Tooltip("The speed at which the screen fades from black")]
-    private float _fadeInRate = 2f;
+	private float _fadeInRate = 2f;
 
-    public float FadeInRate
-    {
-        get
-        {
-            return this._fadeInRate;
-        }
-    }
+	public float FadeInRate
+	{
+		get
+		{
+			return this._fadeInRate;
+		}
+	}
 	[Header("Events")]
 
 	[SerializeField]
@@ -74,33 +74,32 @@ public class BlackoutTransition : MonoBehaviour
 
 	public TransitionState CurrentState {get; private set;}
 
-    private float _targetAlpha;
+	private float _targetAlpha;
 
 
-    private void Awake()
-    {
-        _blackoutImage ??= this.GetComponent<Image>();
-        _targetAlpha = BlackoutImage.color.a;
-    }
+	private void Awake()
+	{
+		_blackoutImage ??= this.GetComponent<Image>();
+		_targetAlpha = BlackoutImage.color.a;
+	}
 
-    private void Update()
-    {
-        float alpha = Mathf.Lerp(this.BlackoutImage.color.a, this._targetAlpha, 
+	private void Update()
+	{
+		float alpha = Mathf.Lerp(this.BlackoutImage.color.a, this._targetAlpha, 
 			(this.CurrentState == TransitionState.FadeIn 
 				? (1f / this.FadeInRate) / Mathf.Abs(this.BlackoutImage.color.a - this._targetAlpha) 
 				: (1f / this.FadeOutRate) / Mathf.Abs(this.BlackoutImage.color.a - this._targetAlpha)) 
 			* Time.deltaTime);
-        alpha = (Mathf.Abs(alpha - this._targetAlpha) < 0.005) ? this._targetAlpha : alpha;
-        BlackoutImage.color = new Color(0, 0, 0, alpha);
+		alpha = (Mathf.Abs(alpha - this._targetAlpha) < 0.005) ? this._targetAlpha : alpha;
+		this.BlackoutImage.color = new Color(0, 0, 0, alpha);
 		this.CheckEvents();
-    }
+	}
 
 	/** Invoke any required events */
 	private void CheckEvents()
 	{
-		if (this._targetAlpha == this.BlackoutImage.color.a)
+		if (this.CurrentState != TransitionState.Inactive && this._targetAlpha == this.BlackoutImage.color.a)
 		{
-			this.CurrentState = TransitionState.Inactive;
 			switch (this.CurrentState)
 			{
 				case TransitionState.FadeIn:
@@ -110,18 +109,27 @@ public class BlackoutTransition : MonoBehaviour
 					this.OnFadeOutDone.Invoke();
 					break;
 			}
+			this.CurrentState = TransitionState.Inactive;
 		}
 	}
 
-    public void FadeIn()
-    {
-		this.CurrentState = TransitionState.FadeIn;
-        _targetAlpha = 0f;
-    }
+	/** Start fade in transition */
+	public void FadeIn()
+	{
+		if (this.CurrentState != TransitionState.FadeIn && this.BlackoutImage.color.a > 0f)
+		{
+			this.CurrentState = TransitionState.FadeIn;
+			this._targetAlpha = 0f;
+		}
+	}
 
-    public void FadeOut()
-    {
-		this.CurrentState = TransitionState.FadeOut;
-        _targetAlpha = 1f;
-    }
+	/** Start fade out transtition */
+	public void FadeOut()
+	{
+		if (this.CurrentState != TransitionState.FadeOut && this.BlackoutImage.color.a < 1f)
+		{
+			this.CurrentState = TransitionState.FadeOut;
+			this._targetAlpha = 1f;
+		}
+	}
 }

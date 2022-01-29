@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8642716927626504950}
   - component: {fileID: 6047042706452192790}
   - component: {fileID: 8392217319489947666}
+  - component: {fileID: 917874243760193262}
   m_Layer: 8
   m_Name: Trigger
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _trigger: {fileID: 8642716927626504950}
   _sceneLoader: {fileID: 8392217319489947666}
-  _transition: {fileID: 0}
+  _transition: {fileID: 917874243760193262}
 --- !u!114 &8392217319489947666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +80,27 @@ MonoBehaviour:
   _scenePath: 
   _mode: 0
   _loadingScenePath: Assets/Scenes/Loading.unity
+--- !u!114 &917874243760193262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6603596705768583281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa467b25634f59b41963055234713f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blackoutImage: {fileID: 0}
+  _fadeOutRate: 1
+  _fadeInRate: 1e+13
+  _onFadeOutDone:
+    m_PersistentCalls:
+      m_Calls: []
+  _onFadeInDone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6801136939839272655
 GameObject:
   m_ObjectHideFlags: 0

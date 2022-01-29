@@ -49,7 +49,7 @@ public class LevelCompleteEffects : MonoBehaviour
 				}
 				if (this._trigger.gameObject != this.gameObject)
 				{
-					Debug.LogError("Trigger must be on smae game object as this");
+					Debug.LogError("Trigger must be on same game object as this");
 				}
 			}
 		}
