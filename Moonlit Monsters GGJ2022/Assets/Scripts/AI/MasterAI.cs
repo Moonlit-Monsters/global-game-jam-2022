@@ -52,6 +52,23 @@ public class MasterAI : MonoBehaviour
 		}
 	}
 
+	[Header("Settings")]
+
+	[SerializeField]
+	[Tooltip("The name of the boolean player setting to disable this attacking")]
+	private string _peacefulSettingName;
+
+	public string PeacefulSettingName
+	{
+		get
+		{
+			return this._peacefulSettingName;
+		}
+	}
+
+	/** Whether this should not attack */
+	public bool Peaceful {get; private set;} = false;
+
 	public enum MasterState
 	{
 		Stunned,
@@ -98,7 +115,7 @@ public class MasterAI : MonoBehaviour
 	/** Switch to the attack state */
 	public void SwitchToAttack()
 	{
-		if (this.CurrentState != MasterState.Attack)
+		if (!this.Peaceful && this.CurrentState != MasterState.Attack)
 		{
 			this.CurrentState = MasterState.Attack;
 			this.ToggleBehaviours();
@@ -131,6 +148,10 @@ public class MasterAI : MonoBehaviour
 
 	private void OnEnable()
 	{
+		if (this.PeacefulSettingName.Length > 0)
+		{
+			this.Peaceful = PlayerPrefs.GetInt(this.PeacefulSettingName, this.Peaceful ? 1 : 0) != 0;
+		}
 		this.StartPoint = this.transform.position;
 		this.CurrentState = RealitySwitcher.Instance.IsReality ? MasterState.Pursue : MasterState.Wander;
 		this.ToggleBehaviours();
