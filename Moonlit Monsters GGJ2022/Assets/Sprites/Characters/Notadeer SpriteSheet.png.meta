@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 0230fe9d3906faa4b941857753e37ed8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5538668212821160807
+    second: Notadeer SpriteSheet_0
+  - first:
+      213: -152154802072014720
+    second: Notadeer SpriteSheet_1
+  - first:
+      213: -6549631566823207003
+    second: Notadeer SpriteSheet_2
+  - first:
+      213: 2965416083242428870
+    second: Notadeer SpriteSheet_3
+  - first:
+      213: -4850747762396788186
+    second: Notadeer SpriteSheet_4
+  - first:
+      213: -4152276375055809283
+    second: Notadeer SpriteSheet_5
+  - first:
+      213: 6328810596086513455
+    second: Notadeer SpriteSheet_6
+  - first:
+      213: -2439182394769285479
+    second: Notadeer SpriteSheet_7
+  - first:
+      213: -2961086461604962751
+    second: Notadeer SpriteSheet_8
+  - first:
+      213: -884571471338607453
+    second: Notadeer SpriteSheet_9
+  - first:
+      213: -5254346999761755248
+    second: Notadeer SpriteSheet_10
+  - first:
+      213: 424484580690428657
+    second: Notadeer SpriteSheet_11
+  - first:
+      213: 1186258673813424207
+    second: Notadeer SpriteSheet_12
+  - first:
+      213: 3899045866748041632
+    second: Notadeer SpriteSheet_13
+  - first:
+      213: 2987063859106610906
+    second: Notadeer SpriteSheet_14
+  - first:
+      213: -2293215240234526326
+    second: Notadeer SpriteSheet_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +80,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +89,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -65,10 +113,22 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +137,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 452.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763f3f9f46d4ddc40800000000000000
+      internalID: 5538668212821160807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 452.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080b0af730073edf0800000000000000
+      internalID: -152154802072014720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 452.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af41d99ac80b15a0800000000000000
+      internalID: -6549631566823207003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 452.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c925ec5736472920800000000000000
+      internalID: 2965416083242428870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 302.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a81574c9eaeacb0800000000000000
+      internalID: -4850747762396788186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 302.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df44d87f2a62066c0800000000000000
+      internalID: -4152276375055809283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 302.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ff676a4b374d750800000000000000
+      internalID: 6328810596086513455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 302.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ed3690988462ed0800000000000000
+      internalID: -2439182394769285479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e51da3d8b18e6d0800000000000000
+      internalID: -2961086461604962751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 152.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acea68feee59b3f0800000000000000
+      internalID: -884571471338607453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 152.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093af801e3fc417b0800000000000000
+      internalID: -5254346999761755248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 152.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f20fa42a7214e500800000000000000
+      internalID: 424484580690428657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4800609aff667010800000000000000
+      internalID: 1186258673813424207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9d87ace813c1630800000000000000
+      internalID: 3899045866748041632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adef473f0ce247920800000000000000
+      internalID: 2987063859106610906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notadeer SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2.25
+        width: 150.75
+        height: 150.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a891f4493ecdc20e0800000000000000
+      internalID: -2293215240234526326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
