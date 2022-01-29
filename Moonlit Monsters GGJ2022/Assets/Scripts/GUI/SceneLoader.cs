@@ -71,4 +71,11 @@ public class SceneLoader : MonoBehaviour
 			SceneManager.LoadScene(this.ScenePath, this.Mode);
 		}
 	}
+
+	/** Load the scene at the given path */
+	public void LoadScene(string scene_path)
+	{
+		this._scenePath = scene_path;
+		this.LoadScene();
+	}
 }

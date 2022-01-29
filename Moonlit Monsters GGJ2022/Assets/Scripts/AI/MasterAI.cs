@@ -126,7 +126,6 @@ public class MasterAI : MonoBehaviour
 	{
 		if (!this.Peaceful && this.CurrentState != MasterState.Attack)
 		{
-			Debug.Log("attack");
 			this.CurrentState = MasterState.Attack;
 			this.ToggleBehaviours();
 		}
