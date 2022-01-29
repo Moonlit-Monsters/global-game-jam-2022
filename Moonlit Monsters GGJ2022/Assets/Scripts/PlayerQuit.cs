@@ -21,7 +21,6 @@ public class PlayerQuit : MonoBehaviour
 
 	public void Quit(InputAction.CallbackContext context)
 	{
-		Debug.Log("player quit");
 		this._quit.Quit();
 	}
 

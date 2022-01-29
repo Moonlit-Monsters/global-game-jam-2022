@@ -477,8 +477,8 @@ MonoBehaviour:
     m_ActionName: Player/Attack[/Keyboard/space,/Keyboard/z]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: fdef998a-ba93-4f73-b236-5112b3440463
-    m_ActionName: Universal/Quit[/Keyboard/escape]
+    m_ActionId: b5bca265-acaf-4045-9014-c50cbc6e94bf
+    m_ActionName: Player/Quit[/Keyboard/escape,/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _input: {fileID: 3453216059614236632}
   _quit: {fileID: 5034750441920039703}
-  _actionName: Universal/Quit
+  _actionName: Player/Quit
 --- !u!114 &5034750441920039703
 MonoBehaviour:
   m_ObjectHideFlags: 0
