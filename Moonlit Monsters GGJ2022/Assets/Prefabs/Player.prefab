@@ -313,6 +313,8 @@ GameObject:
   - component: {fileID: 3054507181313898063}
   - component: {fileID: 4589316396870604514}
   - component: {fileID: 3746026792749469374}
+  - component: {fileID: 6135475916455572439}
+  - component: {fileID: 5034750441920039703}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -473,6 +475,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b42138a4-2a41-47f3-82e7-90e3bd152433
     m_ActionName: Player/Attack[/Keyboard/space,/Keyboard/z]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fdef998a-ba93-4f73-b236-5112b3440463
+    m_ActionName: Universal/Quit[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -639,6 +645,33 @@ MonoBehaviour:
   _onFadeInDone:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6135475916455572439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453216059614236634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afdfa5566ddc3cc438f77f6be231ac9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _input: {fileID: 3453216059614236632}
+  _quit: {fileID: 5034750441920039703}
+  _actionName: Universal/Quit
+--- !u!114 &5034750441920039703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453216059614236634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478034804dc23cb46bb9700067a08cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5843875732515406734
 GameObject:
   m_ObjectHideFlags: 0
