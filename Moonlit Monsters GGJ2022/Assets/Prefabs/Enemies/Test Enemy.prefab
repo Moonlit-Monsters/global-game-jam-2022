@@ -177,6 +177,8 @@ MonoBehaviour:
   _pursue: {fileID: 4737971555658982702}
   _attack: {fileID: 289516750991444202}
   _stun: {fileID: 7397438048366991137}
+  _peacefulSettingName: Peaceful
+  _peaceful: 0
 --- !u!1 &2480708425527580946
 GameObject:
   m_ObjectHideFlags: 0
