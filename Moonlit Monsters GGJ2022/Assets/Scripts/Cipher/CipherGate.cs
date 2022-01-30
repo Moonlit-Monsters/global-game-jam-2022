@@ -30,6 +30,15 @@ public class CipherGate : CipherPieceBase
 		}
 	}
 
+	[SerializeField]
+	private Animator _animator;
+
+	[Header("Animation Settings")]
+
+	[SerializeField]
+	[Tooltip("The animation boolean to set to true when this opens")]
+	private string _boolName;
+
 	[Header("Events")]
 
 	[SerializeField]
@@ -54,6 +63,7 @@ public class CipherGate : CipherPieceBase
 		{
 			this.IsOpen = true;
 			this.GateCollider.enabled = false;
+			this._animator.SetBool(this._boolName, true);
 			this.OnOpen.Invoke();
 		}
 	}
@@ -61,6 +71,11 @@ public class CipherGate : CipherPieceBase
 	private void OnTriggerEnter2D(Collider2D coll)
 	{
 		this.Open();
+	}
+
+	private void Update()
+	{
+		this._animator.SetBool(this._boolName, this.IsOpen);
 	}
 
 	#if UNITY_EDITOR

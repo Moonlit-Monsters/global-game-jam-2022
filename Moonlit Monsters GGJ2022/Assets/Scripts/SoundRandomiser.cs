@@ -40,7 +40,7 @@ public class SoundRandomiser : MonoBehaviour
 
 	public void PlayClip()
 	{
-		if (this.isActiveAndEnabled)
+		if (this.isActiveAndEnabled & !this._audioSource.isPlaying)
 		{
 			this.AudioSource.PlayOneShot(this.Clips[this.PickClip(this.Clips)], 1f);
 		}
